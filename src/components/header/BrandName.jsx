@@ -5,7 +5,7 @@ function BrandName() {
   return (
     <div className='flex items-center gap-2'>
         <img className='w-7' src={Youtube_Music} alt="Youtube Music" />
-        <span className='text-xl'>Music</span>
+        <span className='text-xl lg:text-text'>Music</span>
     </div>
   )
 }
