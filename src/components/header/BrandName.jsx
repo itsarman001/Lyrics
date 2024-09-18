@@ -1,11 +1,10 @@
 import React from 'react'
-import Youtube_Music from '../../assets/Youtube_Music_icon.svg'
 
-function BrandName() {
+const BrandName = () => {
+    const brandName_src = '//music.youtube.com/img/on_platform_logo_dark.svg'
   return (
-    <div className='flex items-center gap-2'>
-        <img className='w-7' src={Youtube_Music} alt="Youtube Music" />
-        <span className='text-xl lg:text-text'>Music</span>
+    <div>
+        <img src={brandName_src} className='w-40 md:w-36 lg:w-28' alt="Youtube Music" />
     </div>
   )
 }
