@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import { FaArrowLeft } from "react-icons/fa";
-import { IoIosSearch } from "react-icons/io";
-import { RxCrossCircled } from "react-icons/rx";
+import { Search, X } from "lucide-react";
 
 const SearchBar = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const handleClearBtn = ()=> {
+    setIsTyping(false)
+    setSearchQuery("")
+  }
+
+  const handleSearchQueryChange = (e) => {
+    setSearchQuery(e.target.value);
+    setIsTyping(e.target.value.length > 0);
+  };
   return (
-    <div className="flex items-center justify-between gap-3 bg-primary border px-4 py-2 rounded md:w-4/5">
-      <div className="text-text text-xl">{isTyping ? <FaArrowLeft /> : <IoIosSearch />}</div>
-      <div className="w-full hidden md:block">
-        <input
-          type="text"
-          placeholder="Search music, podcasts and more"
-          className="px-2 py-1 w-full bg-transparent focus:outline-none text-text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
-      <div className="text-text text-xl hidden md:block">{isTyping ? <RxCrossCircled /> : null}</div>
+    <div className={`flex items-center justify-between gap-3 ${isTyping ? "bg-text text-primary border-[1px]" : "bg-secondary text-text"}   px-4 py-2 rounded-full md:w-2/5 `}>
+       <Search />
+      <input
+        type="text"
+        placeholder="Search Music, Artists, Album, Prodcast..."
+        className="w-full h-full transition bg-transparent border-none outline-none active:outline-none"
+        value={searchQuery}
+        onChange={handleSearchQueryChange}
+      />
+      {isTyping ? <X onClick={handleClearBtn}/> : ""}
     </div>
   );
 };

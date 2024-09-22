@@ -1,28 +1,25 @@
-import { IoHomeSharp } from "react-icons/io5";
-import { MdExplore } from "react-icons/md";
-import { MdOutlineLibraryMusic } from "react-icons/md";
-import { SiGradleplaypublisher } from "react-icons/si";
+import { House, Compass, StepForward, LibraryBig } from 'lucide-react';
 
 export const NAVIGATION_LINKS = [
   {
     name: "Home",
     path: "/",
-    icon: <IoHomeSharp />,
+    icon: <House />,
   },
   {
     name: "Explore",
     path: "/explore",
-    icon: <MdExplore />,
+    icon: <Compass />,
   },
   {
     name: "Samples",
     path: "/samples",
-    icon: <SiGradleplaypublisher />,
+    icon: <StepForward />,
   },
   {
     name: "Library",
     path: "/library",
-    icon: <MdOutlineLibraryMusic />,
+    icon: <LibraryBig />,
   },
   
 ];

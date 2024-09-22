@@ -1,5 +1,5 @@
 import BrandName from "./BrandName";
-import ProfileDropdownMenu from "./ProfileDropdownMenu";
+import ProfileDropdownMenu from "./ProfileDropdownMenu.jsx";
 import SearchBar from "./SearchBar";
 import Navbar from './Navbar'
 

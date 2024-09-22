@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const BrandName = () => {
-    const brandName_src = '//music.youtube.com/img/on_platform_logo_dark.svg'
   return (
-    <div>
-        <img src={brandName_src} className='w-40 md:w-36 lg:w-28' alt="Youtube Music" />
+    <div className="text-xl text-text hover:text-accent font-semibold transition duration-300 cursor-pointer">
+      <Link to="/">RemixPlayer</Link>
     </div>
-  )
-}
+  );
+};
 
-export default BrandName
+export default BrandName;

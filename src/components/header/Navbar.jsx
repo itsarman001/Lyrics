@@ -1,31 +1,28 @@
-import React, { useState } from "react";
-import { BrandName, SearchBar, ProfileDropdownMenu } from "./index";
-import { IoMenuOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import React from "react";
+import BrandName from "./BrandName";
+import SearchBar from "./SearchBar";
+import { useUserContext } from "../../context/UserContext";
 
 const Navbar = () => {
-  const [isLogedin, setIslogedin] = useState(false);
+  const { NAVIGATION_LINKS } = useUserContext();
+  
   return (
-    <nav className="flex items-center justify-between px-4 py-2">
-      <div className="flex items-center gap-4">
-        <div className="text-3xl text-text">
-        <IoMenuOutline />
-        </div>
-        <Link to="/">
-          {" "}
-          <BrandName />{" "}
-        </Link>
+    <nav className="flex items-center justify-between w-screen border-b-[1px] border-accent text-text px-4 py-2">
+      <div className="flex items-center gap-3 w-1/4">
+      <BrandName />
       </div>
-      <div className="flex items-center justify-end gap-4 w-full md:w-1/2">
-        <SearchBar />
-
-        {isLogedin ? (
-          <ProfileDropdownMenu />
-        ) : (
-          <button className="px-2 py-1 bg-red-400 rounded text-white hover:bg-red-500">
-            Log in
-          </button>
-        )}
+      <div className="w-full md:w-4/5 flex items-center gap-4 justify-end">
+      <div>
+        <ul className=" items-center gap-2 hidden md:flex">
+        {NAVIGATION_LINKS.map((link) => (
+          <li key={link.name} className="flex items-center gap-2 cursor-pointer hover:bg-secondary hover:text-accent rounded-lg w-full transition duration-300 px-3 py-2">
+            <span>{link.icon}</span>
+            <span>{link.name}</span>
+          </li>
+        ))}
+        </ul>
+      </div>
+      <SearchBar />
       </div>
     </nav>
   );
