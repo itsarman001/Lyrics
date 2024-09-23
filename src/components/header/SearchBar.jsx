@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 import { Search, X } from "lucide-react";
+import { useUserContext } from "../../context/UserContext";
 
 const SearchBar = () => {
   const [isTyping, setIsTyping] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  const { searchQuery, setSearchQuery } = useUserContext();
 
-  const handleClearBtn = ()=> {
-    setIsTyping(false)
-    setSearchQuery("")
-  }
+  const handleClearBtn = () => {
+    setIsTyping(false);
+    setSearchQuery("");
+  };
 
   const handleSearchQueryChange = (e) => {
     setSearchQuery(e.target.value);
     setIsTyping(e.target.value.length > 0);
   };
+  
   return (
-    <div className={`flex items-center justify-between gap-3 ${isTyping ? "bg-text text-primary border-[1px]" : "bg-secondary text-text"}   px-4 py-2 rounded-full md:w-2/5 `}>
-       <Search />
+    <div
+      className={`flex items-center justify-between gap-3 ${
+        isTyping
+          ? "bg-text text-primary border-[1px]"
+          : "bg-secondary text-text"
+      }   px-4 py-2 rounded-full md:w-2/5 `}
+    >
+      <Search />
       <input
         type="text"
         placeholder="Search Music, Artists, Album, Prodcast..."
@@ -24,7 +32,7 @@ const SearchBar = () => {
         value={searchQuery}
         onChange={handleSearchQueryChange}
       />
-      {isTyping ? <X onClick={handleClearBtn}/> : ""}
+      {isTyping ? <X onClick={handleClearBtn} /> : ""}
     </div>
   );
 };
