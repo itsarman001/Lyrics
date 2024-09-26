@@ -1,5 +1,5 @@
 import { Navbar } from "./header";
-import Home from './main/Home'
+import {Home, LoginForm} from './main/'
 import MobileNav from './footer/MobileNav'
 
-export { Navbar, MobileNav, Home };
+export { Navbar, MobileNav, Home, LoginForm };

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useUserContext } from "../context/UserContext";
-const searchEndpoint = 
+const searchEndpoint = import.meta.env.VITE_SPOTIFY_NOCODEAPI_ENDPOINT;
 
 function useSearch(searchEndpoint) {
-  const { searchQuery, setSearchQuery, searchResults, setSearchResults } = useUserContext();
+  const { searchQuery, setSearchQuery, searchResults, setSearchResults } =
+    useUserContext();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 

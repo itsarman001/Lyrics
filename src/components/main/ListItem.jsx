@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ListItem = ({children, className = ""}) => {
+const ListItem = ({children, className = "", key}) => {
   return (
-    <li className={`px-3 py-2 rounded-lg ${className}`}>{children}</li>
+    <span key={key} className={`px-3 py-2 rounded-lg ${className}`}>{children}</span>
   )
 }
 
