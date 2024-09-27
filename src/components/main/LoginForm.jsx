@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { loginEndpoint } from "../../spotify";
 
 const LoginForm = () => {
-  const [spotifyAuthLink, setSpotifyAuthLink] = useState("");
+  const spotifyAuthLink = loginEndpoint
+  const [token, setToken] = useState("")
 
+  useEffect(() => {
+    const hash = window.location.hash
+    console.log(hash)
+  
+    return
+  }, [])
   
 
   return (

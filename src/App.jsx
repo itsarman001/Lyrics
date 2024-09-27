@@ -5,20 +5,24 @@ import { Navbar, MobileNav, Home, LoginForm } from "./components";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [token, setToken] = useState("");
 
-  // Check authentication status on component mount
   useEffect(() => {
-    const checkAuthentication = async () => {
-      try {
-        // will write this later
-        const user = await checkUserAuthentication();
-        setIsLoggedIn(user !== null);
-      } catch (error) {
-        console.error("Error checking authentication:", error);
+    try {
+      const token = window.localStorage.getItem('token');
+  
+      if (!token) {
+        const hash = window.location.hash;
+        window.location.hash = '';
+        const _token = hash.split('&')[0].split('=')[1];
+        window.localStorage.setItem('token', _token);
+        setToken(_token);
+      } else {
+        setToken(token);
       }
-    };
-
-    checkAuthentication();
+    } catch (error) {
+      console.log(`Error while login: ${error}`);
+    }
   }, []);
 
   return (
