@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { loginEndpoint } from "../../spotify";
+import { loginEndpoint } from "../../hooks/useSpotify";
 
 const LoginForm = () => {
   const spotifyAuthLink = loginEndpoint
