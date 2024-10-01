@@ -64,10 +64,6 @@ This will start the application at http://localhost:3000 by default.
 2. You may be prompted to login to Spotify to authorize access to your library.
 3. Once logged in, you should be able to browse your music, create playlists, and play songs.
 
-### Contributing
-
-We welcome contributions to this project! Please see the `CONTRIBUTING.md` file for details on how to contribute.
-
 ### License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
