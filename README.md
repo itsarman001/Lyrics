@@ -31,7 +31,7 @@ git clone https://github.com/itsarman001/Lyrics
 2. Navigate to the project directory:
 
 ```bash
-cd music-stream
+cd lyrics
 ```
 
 3. Install dependencies:
@@ -56,7 +56,7 @@ VITE_SPOTIFY_WEBAPI_CLIENT_ID = "YOUR_CLIENT_ID";
 npm run dev
 ```
 
-This will start the application at http://localhost:3000 by default.
+This will start the application at http://localhost:5173 by default.
 
 ### Usage
 
