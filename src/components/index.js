@@ -3,8 +3,10 @@ import Home from "./Home";
 import Navbar from "./header/Navbar";
 import BrandName from "./header/BrandName";
 import SearchBar from "./search/SearchBar";
-import Sidebar, {SidebarItems} from "./sidebar/Sidebar";
+import Sidebar from "./sidebar/Sidebar";
+import SidebarItem from './sidebar/SidebarItem'
 import Library from "./library/Library";
+import Card from "./library/Card"
 import Footer from "./footer/Footer";
 
 export {
@@ -14,7 +16,8 @@ export {
   BrandName,
   SearchBar,
   Sidebar,
-  SidebarItems,
+  SidebarItem,
   Library,
+  Card,
   Footer,
 };

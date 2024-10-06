@@ -1,61 +1,54 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { useState } from "react";
 import { ChevronFirst, ChevronLast, MoreVertical } from "lucide-react";
 import { BrandName } from "../index";
+import SidebarContext from "./SidebarContext";
+import SidebarItem from "./SidebarItem";
+import { NAVIGATIONS } from "../../utils/Constants";
 
-const SidebarContext = createContext();
-
-const Sidebar = ({ children }) => {
+const Sidebar = () => {
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <aside className="h-screen">
+    <aside className={`h-screen ${expanded ? "w-52" : "w-16"} transition-width duration-200`}>
       <nav className="h-full flex flex-col bg-secondary border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
-          {/* <span
-            className={`overflow-hidden transition-all ${
-              expanded ? "w-32" : "w-0"
-            }`}
-          >
+          <span className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`}>
             <BrandName />
-          </span> */}
-          {/* Temporary Logo */}
-          <img
-            src="https://img.logoipsum.com/243.svg"
-            className={`overflow-hidden transition-all ${
-              expanded ? "w-32" : "w-0"
-            }`}
-            alt=""
-          />
+          </span>
+
           <button
             onClick={() => setExpanded((prev) => !prev)}
-            className="p-1.5 rounded-lg bg-text hover:bg-accent "
+            className="p-1.5 rounded-lg bg-text hover:bg-accent transition-colors duration-200"
           >
-            {expanded ? <ChevronFirst /> : <ChevronLast />}
+            {expanded ? <ChevronFirst size={24} /> : <ChevronLast size={24} />}
           </button>
         </div>
 
         <SidebarContext.Provider value={{ expanded }}>
-          <ul className="flex-1 px-3">{children}</ul>
+          <ul className="flex-1 px-3 py-4">
+            {NAVIGATIONS.map((nav, index) => (
+              <SidebarItem
+                key={index}
+                icon={nav.icon}
+                text={nav.title}
+                active={window.location.pathname === nav.path} 
+              />
+            ))}
+          </ul>
         </SidebarContext.Provider>
 
         <div className="border-t flex p-3 text-text">
           <img
             src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
             alt="User Profile"
-            className="w-10 h-10 rounded-md "
+            className="w-10 h-10 rounded-md"
           />
-          <div
-            className={`flex justify-between items-center overflow-hidden transition-all ${
-              expanded ? "w-52 ml-3" : "w-0"
-            }`}
-          >
+          <div className={`flex justify-between items-center overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}`}>
             <div className="leading-4">
               <h3 className="font-semibold">John Doe</h3>
-              <span className="text-xs text-gray-400">
-                kamehameha123@gmail.com
-              </span>
+              <span className="text-xs text-gray-400">kamehameha123@gmail.com</span>
             </div>
-            <MoreVertical size={20} />
+            <MoreVertical size={24} />
           </div>
         </div>
       </nav>
@@ -64,32 +57,3 @@ const Sidebar = ({ children }) => {
 };
 
 export default Sidebar;
-
-export const SidebarItems = ({ icon, text, active }) => {
-  const { expanded } = useContext(SidebarContext);
-  return (
-    <li
-      className={`relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer transition-colors group ${
-        active
-          ? "bg-gradient-to-t from-indigo-200 to-indigo-100 text-indigo-800"
-          : "hover:bg-indigo-50 text-gray-600"
-      }`}
-      role="listitem"
-    >
-      {icon}
-      <span
-        className={`overflow-hidden transition-all ${
-          expanded ? "w-52 ml-3" : "w-0"
-        }`}
-      >
-        {text}
-      </span>
-
-      {!expanded && (
-        <div
-        className={`absolute left-full rounded-md px-2 py-1 ml-6 bg-indigo-100 text-indigo-800 text-sm invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opcacity-100 group-hover:translate-x-0`}
-        >{text}</div>
-      )}
-    </li>
-  );
-};

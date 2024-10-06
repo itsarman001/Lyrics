@@ -1,31 +1,43 @@
 import React from "react";
-import { Navbar, Sidebar, SidebarItems, Library, Footer } from "./index";
-import { NAVIGATIONS } from "../utils/Constants";
+import { Navbar, Sidebar, Library, Card, Footer } from "./index";
+
+const track = {
+  album: {
+    album_type: "album",
+    artists: [
+      {
+        name: "Dummy Artist",
+        type: "artist",
+      },
+    ],
+    images: [
+      {
+        url: "https://via.placeholder.com/150",
+      },
+    ],
+    name: "Dummy Album",
+    type: "album",
+  },
+  artists: [
+    {
+      name: "Dummy Artist",
+      type: "artist",
+    },
+  ],
+  name: "Dummy Track",
+  type: "track",
+  uri: "spotify:track:dummyuri",
+};
 
 const Home = () => {
   return (
-    <section className="bg-primary w-full">
-      {/* Lyrics Body */}
-      <div className="w-2/5">
-        {/* Sidebar Section */}
-        <Sidebar children={
-          NAVIGATIONS.map((elem)=>(
-            <SidebarItems text={elem.title} icon={elem.icon}/>
-          ))
-        }/>
-        {/* Main Body */}
-        <div>
-          {/* Navbar */}
-          <Navbar />
-          {/* Library */}
-          <div>
-            <Library />
-          </div>
-        </div>
-      </div>
-      {/* Footer Section */}
+    <section className="bg-primary w-full flex items-center justify-between">
       <div>
-        <Footer />
+        {/* Sidebar Section */}
+        <Sidebar />
+      </div>
+      <div>
+        {/* <Card track={track} /> */}
       </div>
     </section>
   );

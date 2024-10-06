@@ -6,18 +6,18 @@ export const reducerCases = {
 
 export const NAVIGATIONS = [
     {
-        icon: <House />,
+        icon: House,
         title: "Home",
         path: "/"
     },
     {
-        icon: <Compass />,
+        icon: Compass,
         title: "Explore",
         path: "/explore"
     },
     {
-        icon: <SquareLibrary />,
+        icon: SquareLibrary,
         title: "Library",
         path: "/library"
     },
-]
+];
