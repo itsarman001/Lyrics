@@ -1,10 +1,9 @@
 import React from 'react';
+import logo from '../../assets/BrandName.webp'
 
-const BrandName = () => {
+const BrandName = ({size}) => {
   return (
-    <div className="text-center text-2xl font-bold text-white md:text-3.5xl lg:text-4xl">
-      <span className="font-serif">Lamha</span>
-    </div>
+    <img className={size} src={logo} alt="Lamha" />
   );
 };
 
