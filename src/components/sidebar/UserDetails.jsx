@@ -3,7 +3,7 @@ import { MoreVertical } from "lucide-react";
 import SidebarContext from "./SidebarContext";
 import { useStateProvider } from "../../utils/StateProvider";
 
-const User = () => {
+const UserDetails = () => {
   const { expanded } = useContext(SidebarContext);
   const [{ userInfo }] = useStateProvider();
 
@@ -29,4 +29,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserDetails;

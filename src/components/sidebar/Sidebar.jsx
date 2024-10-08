@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronFirst, ChevronLast } from "lucide-react";
-import { BrandName, User } from "../index";
+import { BrandName, UserDetails } from "../index";
 import SidebarContext from "./SidebarContext";
 import SidebarItem from "./SidebarItem";
 import { NAVIGATIONS } from "../..//utils/Constants";
@@ -45,7 +45,7 @@ const Sidebar = () => {
             ))}
           </ul>
 
-          <User />
+          <UserDetails />
         </SidebarContext.Provider>
       </nav>
     </aside>

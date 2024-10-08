@@ -7,8 +7,9 @@ import BrandName from "./header/BrandName";
 import SearchBar from "./search/SearchBar";
 import Sidebar from "./sidebar/Sidebar";
 import SidebarItem from "./sidebar/SidebarItem";
-import User from './sidebar/User'
+import UserDetails from "./sidebar/UserDetails";
 import Card from "./library/Card";
+import Tracks from "./library/Tracks"
 import Footer from "./footer/Footer";
 
 export {
@@ -21,7 +22,8 @@ export {
   SearchBar,
   Sidebar,
   SidebarItem,
-  User,
+  UserDetails,
   Card,
+  Tracks,
   Footer,
 };

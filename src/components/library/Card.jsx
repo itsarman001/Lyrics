@@ -1,27 +1,46 @@
-import React from "react";
+import React, { useState } from 'react';
 
-const Card = ({ track }) => {
+const Card = ({ artistName, imageSrc, isRounded }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="bg-gray-900 rounded-lg shadow-lg p-4 flex items-center">
+    <div
+      className="relative w-36 h-44 bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <img
-        className="w-16 h-16 rounded-md"
-        src={track.album.images[0].url}
-        alt={`${track.name} album cover`}
+        src={imageSrc}
+        alt={artistName}
+        className={`w-full h-3/5 object-cover ${isRounded ? 'rounded-full' : 'rounded-none'} transition-all duration-300`}
       />
-      <div className="ml-4">
-        <h2 className="text-xl font-bold text-white">{track.name}</h2>
-        <p className="text-gray-400">
-          {track.artists.map((artist) => artist.name).join(", ")}
-        </p>
-        <p className="text-gray-600">{track.album.name}</p>
-      </div>
-      <div className="ml-auto flex items-center">
-        <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-full">
-          Play
-        </button>
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/4 p-4 flex justify-between items-center">
+        <div className="text-white">
+          <p className="text-lg font-semibold">{artistName}</p>
+          <p className="text-sm">Artist</p>
+        </div>
+        {isHovered && (
+          <button className="bg-green-500 text-white p-2 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14.752 11.168l-5.197-3.03A1 1 0 008 9v6a1 1 0 001.555.832l5.197-3.03a1 1 0 000-1.664z"
+              />
+            </svg>
+          </button>
+        )}
       </div>
     </div>
   );
 };
 
 export default Card;
+
