@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
-import { useStateProvider } from "../utils/StateProvider";
-import useFetchUser from "../hooks/useFetchUser";
+import React from "react";
 import { Card } from "./index";
 
 const Home = () => {
-  const [{ token }] = useStateProvider();
-  useFetchUser(token)
-  const src = ""
+  
 
   return (
     <section className="flex items-center justify-between">
