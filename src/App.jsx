@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useStateProvider } from "./utils/StateProvider";
 import { Login, Sidebar, Home, Explore, Library } from "./components";
 import { useAuthToken, useFetchUser, useFetchUserPlaylists } from "./hooks";
 
 const App = () => {
-  const [{ token }] = useStateProvider(); // fetching token from store 
-  useAuthToken(); // this will store token into store
+  const [{ token }] = useStateProvider();
+  useAuthToken();
+  useFetchUser(token);
+  const playlists = useFetchUserPlaylists(token);
+
   if (!token) return <Login />;
-  useFetchUser(token); // this will fetch user data
-  const playlists = useFetchUserPlaylists(token); // this will fetch user playlists
 
   return (
-    <main className="h-screen w-screen relative flex items-center gap-0">
-      <Sidebar />
-      <section className="min-h-full w-full">
+    <main className="h-screen w-screen overflow-hidden flex gap-0">
+      <Sidebar className="h-full overflow-y-auto" />
+      <section className="h-full w-full overflow-y-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

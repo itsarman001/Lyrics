@@ -10,6 +10,7 @@ import SidebarItem from "./sidebar/SidebarItem";
 import UserDetails from "./sidebar/UserDetails";
 import Card from "./library/Card";
 import Tracks from "./library/Tracks"
+import LibraryScreen from './library/LibraryScreen'
 import Footer from "./footer/Footer";
 
 export {
@@ -25,5 +26,6 @@ export {
   UserDetails,
   Card,
   Tracks,
+  LibraryScreen,
   Footer,
 };

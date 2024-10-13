@@ -4,7 +4,7 @@ import { useStateProvider } from "../utils/StateProvider";
 import { reducerCases } from "../utils/Constants";
 
 const useFetchUserPlaylists = (token) => {
-  const [dispatch] = useStateProvider;
+  const [, dispatch] = useStateProvider();
   const [playlists, setPlaylists] = useState([]);
 
   useEffect(() => {

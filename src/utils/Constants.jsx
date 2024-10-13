@@ -3,7 +3,9 @@ import { House, Compass, SquareLibrary } from 'lucide-react';
 export const reducerCases = {
     SET_TOKEN: "SET_TOKEN",
     SET_USER: "SET_USER",
-    SET_USER_PLAYLISTS: "SET_USER_PLAYLISTS"
+    SET_USER_PLAYLISTS: "SET_USER_PLAYLISTS",
+    SET_PLAYLIST_ID: "SET_PLAYLIST_ID",
+    SET_PLAYLIST: "SET_PLAYLIST",
 }
 
 export const NAVIGATIONS = [

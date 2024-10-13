@@ -10,11 +10,9 @@ const scopes = [
   "user-read-playback-position",
   "user-top-read",
   "user-read-recently-played",
-];
+].join(" ");
 
 const useAuth = () =>
-  (window.location.href = `${apiUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-    " "
-  )}&response_type=token&show_daialog=true;`);
+  (window.location.href = `${apiUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}&response_type=token&show_daialog=true;`);
 
 export default useAuth;

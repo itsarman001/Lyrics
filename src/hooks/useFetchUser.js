@@ -15,7 +15,9 @@ const useFetchUser = (token) => {
             "Content-Type": "application/json",
           },
         });
-        console.log(data);
+        // Fix This
+        // This thing is being getting call 4 times or some thing but console.log is showing 4 time
+        // console.log(data); 
         const userInfo = {
           userName: data.display_name,
           userId: data.id,
