@@ -17,7 +17,7 @@ const useFetchPlaylist = () => {
           },
         }
       );
-      const playlistData = {
+      const selectedPlaylist = {
         playlistId: response.data.id,
         playlistName: response.data.name,
         playlistDescription: response.data.description.startsWith("<a")
@@ -35,7 +35,7 @@ const useFetchPlaylist = () => {
           track_number: track.track_number,
         })),
       };
-      dispatch({ type: reducerCases.SET_PLAYLIST, playlistData });
+      dispatch({ type: reducerCases.SET_PLAYLIST, selectedPlaylist });
     };
     fetchPlaylist();
   }, [token, dispatch, selectedPlaylistId]);

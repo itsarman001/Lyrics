@@ -8,10 +8,11 @@ import SearchBar from "./search/SearchBar";
 import Sidebar from "./sidebar/Sidebar";
 import SidebarItem from "./sidebar/SidebarItem";
 import UserDetails from "./sidebar/UserDetails";
-import Card from "./library/Card";
-import Tracks from "./library/Tracks"
-import LibraryScreen from './library/LibraryScreen'
-import Footer from "./footer/Footer";
+import Card from "./libraries/Card";
+import Tracks from "./libraries/Tracks"
+import LibraryScreen from './libraries/LibraryScreen'
+import PlayerSection from './libraries/PlayerSection'
+
 
 export {
   Login,
@@ -27,5 +28,5 @@ export {
   Card,
   Tracks,
   LibraryScreen,
-  Footer,
+  PlayerSection,
 };

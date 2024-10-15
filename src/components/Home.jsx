@@ -6,7 +6,7 @@ const Home = () => {
 
   return (
     <section className="flex items-center justify-between">
-      <Card artistName="Arman" isRounded={false} imageSrc="" />
+      
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { Play } from "lucide-react";
 
 const Card = ({id, name, description, posterSrc}) => {
   return (
-    <div key={id} className=" group flex items-center flex-col p-2 bg-primary hover:bg-secondary transition-colors text-white rounded-md max-w-40 relative">
+    <div key={id} className=" group flex items-center flex-col p-2 bg-primary hover:bg-secondary transition-colors text-white rounded-md max-w-40 min-h-40 relative">
       <div className="relative overflow-hidden">
       <img
         src={posterSrc}
