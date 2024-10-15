@@ -12,6 +12,7 @@ import Card from "./libraries/Card";
 import Tracks from "./libraries/Tracks"
 import LibraryScreen from './libraries/LibraryScreen'
 import PlayerSection from './libraries/PlayerSection'
+import IndexPage from './IndexPage'
 
 
 export {
@@ -29,4 +30,5 @@ export {
   Tracks,
   LibraryScreen,
   PlayerSection,
+  IndexPage,
 };
