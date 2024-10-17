@@ -6,8 +6,8 @@ import { BaseLayout, Login } from "./components";
 const App = () => {
   return (
     <>
-      {/* <BaseLayout /> */}
-       <Login />
+      <BaseLayout />
+       {/* <Login /> */}
     </>
   );
 };
