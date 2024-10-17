@@ -1,13 +1,15 @@
 import React from "react";
-import { useStateProvider } from "../utils/StateProvider";
-import { IndexPage, Login } from "./components";
-import { useAuthToken } from "./hooks";
+
+import { BaseLayout, Login } from "./components";
+
 
 const App = () => {
-  const [{ token }] = useStateProvider();
-  useAuthToken();
-
-  return token ? <IndexPage /> : <Login />;
+  return (
+    <>
+      {/* <BaseLayout /> */}
+       <Login />
+    </>
+  );
 };
 
 export default App;
