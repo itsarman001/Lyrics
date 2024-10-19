@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Sidebar = () => {
+const Explore = () => {
   return (
     <div>
       
@@ -8,4 +8,5 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Explore
+

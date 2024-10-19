@@ -1,12 +1,32 @@
 // Pages
 import BaseLayout from "./BaseLayout";
 import Login from "./Login";
+import Home from "./Home";
+import Explore from "./Explore";
+import Library from "./Library";
 
-// Components
-import Navbar from "./Navigations/Navbar";
-import BrandName from "./Navigations/BrandName";
-import SearchBar from "./Navigations/SearchBar";
-import MobileNav from "./Navigations/MobileNav";
-import Sidebar from "./Navigations/Sidebar";
+// **Components**
 
-export { BaseLayout, Login, Navbar, MobileNav, Sidebar, BrandName, SearchBar };
+// Navigations
+import Navbar from "./navigations/Navbar";
+import BrandName from "./navigations/BrandName";
+import SearchBar from "./navigations/SearchBar";
+import MobileNav from "./navigations/MobileNav";
+import Sidebar from "./navigations/Sidebar";
+
+// Libraries
+import Card from "./libraries/Card";
+
+export {
+  BaseLayout,
+  Login,
+  Home,
+  Explore,
+  Library,
+  Navbar,
+  MobileNav,
+  Sidebar,
+  BrandName,
+  SearchBar,
+  Card,
+};

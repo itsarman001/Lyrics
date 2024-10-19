@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { NAVIGATIONS } from "./Navigations";
 
-const MobileNav = () => {
-
-  
+const MobileNav = ({NAVIGATIONS}) => {
 
   return (
     <nav className="bg-primary border-t-2 border-neutral fixed bottom-0 left-0 w-full h-16 flex justify-between items-center px-4 shadow-md">
