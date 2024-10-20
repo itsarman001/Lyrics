@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { House, Compass, SquareLibrary } from "lucide-react";
-import { Navbar, MobileNav, Sidebar, Home, Explore, Library, Card } from "./";
+import {
+  Navbar,
+  MobileNav,
+  Sidebar,
+  Home,
+  Explore,
+  Library,
+  PlayerBar,
+} from "./";
 import { Route, Routes } from "react-router-dom";
 
 const BaseLayout = () => {
   const [isExpended, setIsExpended] = useState(false);
-  const src =
-    "https://c.saavncdn.com/306/Lost-Found-Hindi-2024-20240517153134-150x150.jpg?bch=480362";
   const NAVIGATIONS = [
     {
       icon: <House />,
@@ -25,35 +31,31 @@ const BaseLayout = () => {
     },
   ];
 
+  const src =
+    "https://a10.gaanacdn.com/gn_pl_img/playlists/P7m3GNKqxo/7m3GQwOybq/size_m_1728637264.jpg";
+
   return (
-    <main className="flex w-screen h-screen relative">
+    <main className="flex w-screen h-screen relative overflow-x-hidden">
       {/* <Sidebar
         isExpended={isExpended}
         NAVIGATIONS={NAVIGATIONS}
         setIsExpended={setIsExpended}
       /> */}
-      <section className="flex-1">
+      <section className="flex-1 flex flex-col justify-between">
         <Navbar isExpended={isExpended} setIsExpended={setIsExpended} />
-        <div>
+        <div className="h-full bg-secondary text-neutral flex-1 overflow-y-hidden">
           <Routes>
-            <Route path="/" element={Home} />
-            <Route path="/explore" element={Explore} />
-            <Route path="/library" element={Library} />
+            <Route path="/" element={<Home />} />
+            <Route path="/explore" element={<Explore />} />
+            <Route path="/library" element={<Library />} />
           </Routes>
         </div>
-        <div className="p-4">
-          <Card
-            isRounded={false}
-            src={src}
-            alt="Lost and Found, Ishq"
-            name="Ishq, Lost and Found"
-            desc="Lost;Found  by Amir Ameer, Faheem Abdullah, Rauhan Malik"
-            id="1234"
-          />
+        <div>
+          <PlayerBar />
+          <div className="md:hidden">
+            <MobileNav NAVIGATIONS={NAVIGATIONS} />
+          </div>
         </div>
-      </section>
-      <section className="md:hidden">
-        <MobileNav NAVIGATIONS={NAVIGATIONS} />
       </section>
     </main>
   );

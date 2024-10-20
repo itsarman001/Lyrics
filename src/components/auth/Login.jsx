@@ -1,5 +1,5 @@
 import React from "react";
-import { BrandName } from "./";
+import { BrandName } from "../";
 
 const Login = () => {
   return (
