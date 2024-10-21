@@ -1,15 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useStateProvider } from "../utils/StateProvider";
 import { reducerCases } from "../utils/Constants";
+import { useAuthToken } from "./";
 
-const useFetchPlaylist = () => {
-  const [{ token, selectedPlaylistId }, dispatch] = useStateProvider();
-
+const useFetchPlaylist = (playlistId) => {
+  const [{ selectedPlaylistId }, dispatch] = useStateProvider();
+  const { token } = useAuthToken();
+  const [newPlaylist, setNewPlaylist] = useState(null);
   useEffect(() => {
     const fetchPlaylist = async () => {
       const response = await axios.get(
-        `https://api.spotify.com/v1/playlists/${selectedPlaylistId}`,
+        `https://api.spotify.com/v1/playlists/${playlistId}`,
         {
           headers: {
             Authorization: "Bearer " + token,
@@ -35,10 +37,12 @@ const useFetchPlaylist = () => {
           track_number: track.track_number,
         })),
       };
+      setNewPlaylist(selectedPlaylist);
       dispatch({ type: reducerCases.SET_PLAYLIST, selectedPlaylist });
     };
     fetchPlaylist();
   }, [token, dispatch, selectedPlaylistId]);
+  return newPlaylist;
 };
 
 export default useFetchPlaylist;

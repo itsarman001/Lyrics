@@ -1,6 +1,6 @@
-const clientId = import.meta.env.VITE_SPOTIFY_WEBAPI_CLIENT_ID;
-// const clientId = ""; // Due to some issue had to use hard coded clientid will fix it later
-const redirectUri = "http://localhost:5173";
+const clientId = "";
+// Due to some issue had to use hard coded client Id will fix it later in next version.
+const redirectUri = "http://localhost:5173/";
 const apiUrl = "https://accounts.spotify.com/authorize";
 const scopes = [
   "user-read-playback-state",

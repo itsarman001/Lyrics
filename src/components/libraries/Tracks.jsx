@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Play } from "lucide-react";
 
-const Tracks = ({ src, alt, title, subtitle, index, streamLink }) => {
-
-
+const Tracks = ({ src, alt, title, subtitle, index }) => {
   return (
     <div className="flex items-center justify-between hover:bg-[#4f5661] p-2 rounded-md">
       <div className="flex items-center gap-4">
@@ -16,10 +14,11 @@ const Tracks = ({ src, alt, title, subtitle, index, streamLink }) => {
           <p className="text-base text-gray-300">{subtitle}</p>
         </div>
       </div>
-
-      <div>03:55 Mins</div>
-      <div className="p-2 bg-accent rounded-full">
-        <Play />
+      <div className="flex items-center gap-4">
+        <div>03:55 Mins</div>
+        <div className="p-2 bg-accent rounded-full">
+          <Play />
+        </div>
       </div>
     </div>
   );

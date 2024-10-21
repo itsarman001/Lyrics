@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { House, Compass, SquareLibrary } from "lucide-react";
 import {
+  Login,
   Navbar,
   MobileNav,
   Sidebar,
@@ -31,23 +32,17 @@ const BaseLayout = () => {
     },
   ];
 
-  const src =
-    "https://a10.gaanacdn.com/gn_pl_img/playlists/P7m3GNKqxo/7m3GQwOybq/size_m_1728637264.jpg";
-
   return (
     <main className="flex w-screen h-screen relative overflow-x-hidden">
-      {/* <Sidebar
-        isExpended={isExpended}
-        NAVIGATIONS={NAVIGATIONS}
-        setIsExpended={setIsExpended}
-      /> */}
+      <Sidebar />
       <section className="flex-1 flex flex-col justify-between">
         <Navbar isExpended={isExpended} setIsExpended={setIsExpended} />
         <div className="h-full bg-secondary text-neutral flex-1 overflow-y-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/explore" element={<Explore />} />
-            <Route path="/library" element={<Library />} />
+            <Route path="/library/:id" element={<Library />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
         <div>

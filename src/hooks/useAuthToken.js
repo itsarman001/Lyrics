@@ -1,22 +1,38 @@
-import { useEffect } from "react";
-import { reducerCases } from "../utils/Constants";
-import { useStateProvider } from "../utils/StateProvider";
+import { useEffect, useState } from "react";
 
 const useAuthToken = () => {
-  const [{ token }, dispatch] = useStateProvider();
+  const [token, setToken] = useState(null);
 
   useEffect(() => {
-    try {
-      const hash = window.location.hash;
-      if (hash) {
-        const token = hash.substring(1).split("&")[0].split("=")[1];
-        dispatch({ type: reducerCases.SET_TOKEN, token });
+    const hash = window.location.hash;
+    if (hash) {
+      const tokenFromUrl = hash
+        .substring(1)
+        .split("&")
+        .find((param) => param.startsWith("access_token"))
+        ?.split("=")[1];
+      if (tokenFromUrl) {
+        setToken(tokenFromUrl);
+
+        localStorage.setItem("access_token", tokenFromUrl);
+
         window.location.hash = "";
       }
-    } catch (error) {
-      console.log(`Error while retrieving token: ${error}`);
+    } else {
+      // Retrieve token from local storage if it's not in the URL
+      const storedToken = localStorage.getItem("access_token");
+      if (storedToken) {
+        setToken(storedToken);
+      }
     }
-  }, [dispatch, token]);
+  }, []);
+
+  const clearToken = () => {
+    setToken(null);
+    localStorage.removeItem("access_token");
+  };
+
+  return { token, clearToken };
 };
 
 export default useAuthToken;

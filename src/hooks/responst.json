@@ -1,0 +1,985 @@
+{
+    "playlistId": "37i9dQZF1DWXVJK4aT7pmk",
+    "playlistName": "Hot Hits Punjabi",
+    "playlistDescription": "Catch the hottest Punjabi tracks. Cover - Yo Yo Honey Singh",
+    "posterSrc": "https://i.scdn.co/image/ab67706f00000002d8f8c9141e4efe37992a5f5c",
+    "tracks": [
+        {
+            "id": "78BWCd70D1X6LMkDZm1UoF",
+            "name": "Millionaire",
+            "artists": [
+                "Yo Yo Honey Singh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273aad3f4b601ae8763b3fc4e88",
+            "duration": 199114,
+            "album": "GLORY",
+            "context_uri": "spotify:album:5KF4xCxDD8ip003hoatFT9",
+            "track_number": 1
+        },
+        {
+            "id": "6c4Po8zyQjB4cR5XgLhcGb",
+            "name": "9:45",
+            "artists": [
+                "Prabh Singh",
+                "Jay Trak",
+                "Rooh Sandhu"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273e00b8a590bd56b7217372959",
+            "duration": 117606,
+            "album": "9:45",
+            "context_uri": "spotify:album:5ITQeRYoVu4qRdo9TUTuuR",
+            "track_number": 1
+        },
+        {
+            "id": "69Qzz3yyQSsA0T95jLDoPL",
+            "name": "Dil Tu Jaan Tu",
+            "artists": [
+                "Gurnazar",
+                "Chet Singh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273f8f636b6478d4ba9bd85e339",
+            "duration": 237333,
+            "album": "Dil Tu Jaan Tu",
+            "context_uri": "spotify:album:4UPEfC1TJNAlObvA9a5Fkx",
+            "track_number": 1
+        },
+        {
+            "id": "4WLDaQ8AgSwUgFoPzJkAYK",
+            "name": "Old Money",
+            "artists": [
+                "AP Dhillon"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2734b482d2eec0b3f697439d0b3",
+            "duration": 128098,
+            "album": "Old Money",
+            "context_uri": "spotify:album:2f8hk48Uin6SFQyMKw7AIp",
+            "track_number": 1
+        },
+        {
+            "id": "209QxKVJzh2FLUmZHpYs4m",
+            "name": "God Damn",
+            "artists": [
+                "Badshah",
+                "Karan Aujla",
+                "Hiten"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2739bb2d30b01ac2cada8a8ad03",
+            "duration": 167234,
+            "album": "Ek Tha Raja",
+            "context_uri": "spotify:album:0LcyzKKw3RjFKL6ygISTeU",
+            "track_number": 1
+        },
+        {
+            "id": "3wz2vWhYnnBoFmgMkqtzLy",
+            "name": "Daku",
+            "artists": [
+                "Chani Nattan",
+                "Inderpal Moga"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273705ab6e67003b22644e62964",
+            "duration": 131077,
+            "album": "Daku",
+            "context_uri": "spotify:album:3RaIXDlIRvziryGLXm8lBR",
+            "track_number": 1
+        },
+        {
+            "id": "4K5aBuakMjnDhFa56CmlHC",
+            "name": "MEDAL",
+            "artists": [
+                "Chandra Brar",
+                "MixSingh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273b5693bff4fee3a3d301a442c",
+            "duration": 133043,
+            "album": "MEDAL",
+            "context_uri": "spotify:album:1UWSQ9JqRDlPfFMR89J9kf",
+            "track_number": 1
+        },
+        {
+            "id": "1BpvuKIG7jK5EiTp2tv5z8",
+            "name": "King Shit",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2733bf0683f6ac36cc954339d03",
+            "duration": 226933,
+            "album": "Leo",
+            "context_uri": "spotify:album:1h0Yw7Wm49GGiGpN2gd3o2",
+            "track_number": 1
+        },
+        {
+            "id": "2kQ4qdEtzWR1scQBlsjl8M",
+            "name": "Blockbuster",
+            "artists": [
+                "Faris Shafi",
+                "Umair Butt",
+                "Gharvi Group"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27374a0dfa33a8d19e47f7314b6",
+            "duration": 274570,
+            "album": "Blockbuster",
+            "context_uri": "spotify:album:6uqXvhk1Qq1sUUDTDZgxg8",
+            "track_number": 1
+        },
+        {
+            "id": "0n2LpEAixGBWK8mwUSGtGb",
+            "name": "Chandigarh Ka Chokra",
+            "artists": [
+                "Sunanda Sharma"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2731f1bae1daaa87b1d33432ca1",
+            "duration": 144155,
+            "album": "Chandigarh Ka Chokra",
+            "context_uri": "spotify:album:3VWQigEYk4sOaiLNileTP4",
+            "track_number": 1
+        },
+        {
+            "id": "610keNiNVTIkYD0CqeSerg",
+            "name": "California Love",
+            "artists": [
+                "Cheema Y",
+                "Gur Sidhu"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2737a7cc8411fe9e9e3ac5487f5",
+            "duration": 175686,
+            "album": "ANYWAY",
+            "context_uri": "spotify:album:64MZHXV7IglO8LE8KplSRw",
+            "track_number": 6
+        },
+        {
+            "id": "5thVzD79BxlDTYy0LfHzvu",
+            "name": "Zaroor",
+            "artists": [
+                "Aparshakti Khurana",
+                "Savi Kahlon"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27322054feaa2315be6991352e9",
+            "duration": 175448,
+            "album": "Zaroor",
+            "context_uri": "spotify:album:62yJN1YiKoDvXSrSdiXC13",
+            "track_number": 1
+        },
+        {
+            "id": "7KQdgW7QzNd9oPoCzjCU76",
+            "name": "Bandana",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27340f07cb85475289d1d40e0e7",
+            "duration": 154666,
+            "album": "Bandana",
+            "context_uri": "spotify:album:1jiFBECVkHOJwDe9TcKKiB",
+            "track_number": 1
+        },
+        {
+            "id": "3F3ZuXYFXGM1V6pk3b3zmi",
+            "name": "Kinni Kinni",
+            "artists": [
+                "Diljit Dosanjh",
+                "thiarajxtt"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273cb2f9520171129a3df7a241a",
+            "duration": 213344,
+            "album": "Ghost",
+            "context_uri": "spotify:album:1d1FYLFpu2NITI6ilVaHDd",
+            "track_number": 6
+        },
+        {
+            "id": "16kiQQ4BoLHDyj5W2fkfNK",
+            "name": "Tauba Tauba (From \"Bad Newz\")",
+            "artists": [
+                "Karan Aujla"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27344d3ba1bb25084d20dc66d52",
+            "duration": 207157,
+            "album": "Tauba Tauba (From \"Bad Newz\")",
+            "context_uri": "spotify:album:72nKBrp0K6Nv6Q76TmEWLY",
+            "track_number": 1
+        },
+        {
+            "id": "0XRb6eZE4dBIJdqwf1Mixu",
+            "name": "Suniyan Suniyan",
+            "artists": [
+                "Juss",
+                "MixSingh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27375a0429b40af0e83780b58e3",
+            "duration": 197538,
+            "album": "Suniyan Suniyan",
+            "context_uri": "spotify:album:7fDOsfo0KfyUV2crgrG6zR",
+            "track_number": 1
+        },
+        {
+            "id": "7acH6yiK56etufZpUIv1YW",
+            "name": "Be Mine",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27305d9bce20253e95a11581894",
+            "duration": 148133,
+            "album": "Be Mine",
+            "context_uri": "spotify:album:1B5RSKDW0XtvEyFzBvgP0J",
+            "track_number": 1
+        },
+        {
+            "id": "0uMY0ZOYpXKHPxuakVtQzs",
+            "name": "Murder",
+            "artists": [
+                "Real Boss",
+                "BIG KAY SMG"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273025bb584d6cf0c4dddcf185b",
+            "duration": 182762,
+            "album": "Murder",
+            "context_uri": "spotify:album:1i6h3Xs1qunoQAO7N2XHVg",
+            "track_number": 1
+        },
+        {
+            "id": "6JP8RinqsLkPiBi7B0VLGJ",
+            "name": "Apa Fer Milaange",
+            "artists": [
+                "Savi Kahlon",
+                "The Masterz"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273d6d4441fa2d5d3c50964a1ed",
+            "duration": 254142,
+            "album": "Apa Fer Milaange",
+            "context_uri": "spotify:album:62dVx2sHnVaGFP2cuURpL5",
+            "track_number": 1
+        },
+        {
+            "id": "3FqtduiaqnFYvBgKuc6QWQ",
+            "name": "Winning Speech",
+            "artists": [
+                "Karan Aujla",
+                "Mxrci"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2734a7287c838cba6b00b15f085",
+            "duration": 227441,
+            "album": "Winning Speech",
+            "context_uri": "spotify:album:0pLUWCJtTpJCcYpzSTK7oC",
+            "track_number": 1
+        },
+        {
+            "id": "6eCA1w1FBvYeMcFTD6BWzl",
+            "name": "Ambarsaria",
+            "artists": [
+                "Navaan Sandhu",
+                "Homeboy",
+                "Kaater"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273e8619fc28baf611c6c1aa244",
+            "duration": 212035,
+            "album": "The Finest",
+            "context_uri": "spotify:album:47gUYtnZNZBbbcwc6YMdAy",
+            "track_number": 1
+        },
+        {
+            "id": "2oenSXLDbWVaaL7QjSGYj5",
+            "name": "Lalkara",
+            "artists": [
+                "Diljit Dosanjh",
+                "Intense",
+                "Sultaan"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273cb2f9520171129a3df7a241a",
+            "duration": 160500,
+            "album": "Ghost",
+            "context_uri": "spotify:album:1d1FYLFpu2NITI6ilVaHDd",
+            "track_number": 14
+        },
+        {
+            "id": "0YQJoDL6f46J0n1rOVkpxJ",
+            "name": "Softly",
+            "artists": [
+                "Karan Aujla",
+                "Ikky"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273bb25239324c4e16ae01fda36",
+            "duration": 155161,
+            "album": "Making Memories",
+            "context_uri": "spotify:album:3BGU0BqGwBkYDHpfCWFm7I",
+            "track_number": 7
+        },
+        {
+            "id": "5BQePe9rcCJozHK3oPayYk",
+            "name": "MVP",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27329359add4a18d233f1183349",
+            "duration": 196897,
+            "album": "MVP",
+            "context_uri": "spotify:album:5oCCfkVCpkSUhBUXe0pyJF",
+            "track_number": 1
+        },
+        {
+            "id": "7o1SDLghDwMc4OW3rKakVt",
+            "name": "Afterhours",
+            "artists": [
+                "Bir",
+                "Dhanju",
+                "thiarajxtt"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27389df64d3f9da8cea8641d882",
+            "duration": 140152,
+            "album": "Afterhours",
+            "context_uri": "spotify:album:0gutaa3BZpZvwSL0eVRbP8",
+            "track_number": 1
+        },
+        {
+            "id": "24MMjyA3NLqCsDJfsn51eg",
+            "name": "Mi Amor",
+            "artists": [
+                "Sharn",
+                "The Paul"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273050aa2ba1ea0f6b96f4de231",
+            "duration": 203048,
+            "album": "Mi Amor",
+            "context_uri": "spotify:album:0azGrKHPYvl2MEKwQFfbV2",
+            "track_number": 1
+        },
+        {
+            "id": "4VosVUajzm6nzGlSb6nP3L",
+            "name": "Check It Out",
+            "artists": [
+                "Parmish Verma",
+                "Paradox"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273f3735ea343894170c59668ce",
+            "duration": 195957,
+            "album": "Check It Out",
+            "context_uri": "spotify:album:1vF3ag997oVOcaSYVlFytV",
+            "track_number": 1
+        },
+        {
+            "id": "4hYKmQvLi2yaFAd7Kx07Vp",
+            "name": "Tareefan",
+            "artists": [
+                "Jordan Sandhu",
+                "Mehar Vaani"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273a792a83a5389c4e409c2a638",
+            "duration": 192000,
+            "album": "Tareefan",
+            "context_uri": "spotify:album:36Bplz54txKmm4xAJoUGcg",
+            "track_number": 1
+        },
+        {
+            "id": "53QrRlALFJfZgdcGLKwy5s",
+            "name": "Dior",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2731a8c4618eda885a406958dd0",
+            "duration": 139133,
+            "album": "Still Rollin",
+            "context_uri": "spotify:album:5AivaZj0CiQJoDWqVH2pbh",
+            "track_number": 6
+        },
+        {
+            "id": "3oWv5qDKYN7MH6FdlglMN5",
+            "name": "Moon Rise",
+            "artists": [
+                "Guru Randhawa",
+                "Sanjoy"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2737bcb47bf66f6488ea9009fc5",
+            "duration": 174056,
+            "album": "Man Of The Moon",
+            "context_uri": "spotify:album:0jasm0jnhQ6Y6OUYTI1NL6",
+            "track_number": 6
+        },
+        {
+            "id": "4D8eFUu6Hvulrq6CGqGaLR",
+            "name": "Khayaal",
+            "artists": [
+                "Talwiinder",
+                "NDS"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2737e91da890f9767b646a75b86",
+            "duration": 162018,
+            "album": "Khayaal",
+            "context_uri": "spotify:album:6YRCu9pm8bpzydmmddfXYG",
+            "track_number": 1
+        },
+        {
+            "id": "0R1AZYXc34nfMaiengrkRc",
+            "name": "410",
+            "artists": [
+                "Sidhu Moose Wala",
+                "Sunny Malton",
+                "Offgrid"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273eb507c6116f6f383748a1081",
+            "duration": 234893,
+            "album": "410",
+            "context_uri": "spotify:album:0kUrdWYhWYGz71c0jaGnJe",
+            "track_number": 1
+        },
+        {
+            "id": "2FRSsjZloHsmBF60bCoPrQ",
+            "name": "Tu Juliet Jatt Di ( From \"Jatt & Juliet 3\")",
+            "artists": [
+                "Diljit Dosanjh",
+                "Bunny",
+                "Sagar"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273a062ab65af4a67d792aba1f1",
+            "duration": 205823,
+            "album": "Tu Juliet Jatt Di ( From \"Jatt & Juliet 3\")",
+            "context_uri": "spotify:album:6SgKeQDMRzq0noM0FSaPP6",
+            "track_number": 1
+        },
+        {
+            "id": "4ZVtid5khBfDx6Co0vTUE6",
+            "name": "SPAIN",
+            "artists": [
+                "Jassa Dhillon",
+                "thiarajxtt"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273e338dbec7a22bf36ac51f1a4",
+            "duration": 104006,
+            "album": "VIBIN",
+            "context_uri": "spotify:album:2GPHbR6aZ2rZooX6dF1nwB",
+            "track_number": 3
+        },
+        {
+            "id": "7J5V3MlzpfSF6jEchkfxB6",
+            "name": "Gall Khaas",
+            "artists": [
+                "Zehr Vibe"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27310fb135e4d4cb9ecedf179a9",
+            "duration": 160200,
+            "album": "Gall Khaas",
+            "context_uri": "spotify:album:6zhGxMXaDxizCLjNoIvMw8",
+            "track_number": 1
+        },
+        {
+            "id": "5ouREJYZCYqwF0p7VeUtfH",
+            "name": "IDK HOW",
+            "artists": [
+                "Karan Aujla"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273f9d66911f25fcb4b3b7d5cd3",
+            "duration": 175556,
+            "album": "Four Me",
+            "context_uri": "spotify:album:09LRfKybx7mDRlMtysHrcX",
+            "track_number": 1
+        },
+        {
+            "id": "6wkHR8cU4INbp145hngbQO",
+            "name": "8 ASLE",
+            "artists": [
+                "Sukha",
+                "Chani Nattan",
+                "Prodgk",
+                "Gurlez Akhtar"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273667bb62da094ab292e632868",
+            "duration": 161000,
+            "album": "UNDISPUTED",
+            "context_uri": "spotify:album:5jwxgwhfEuWqBfKYPHaC34",
+            "track_number": 1
+        },
+        {
+            "id": "50UrzLQaUmPp5LsehLMMKR",
+            "name": "Chann Sitare",
+            "artists": [
+                "Ammy Virk",
+                "Avvy Sra"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27376fd47f0550439f283933dcd",
+            "duration": 187142,
+            "album": "Chann Sitare (From \"Oye Makhna\")",
+            "context_uri": "spotify:album:3fms8MQoHUUbAfK9ao7X8G",
+            "track_number": 1
+        },
+        {
+            "id": "5dOOepMv3psX67DJAP5D6I",
+            "name": "Attach",
+            "artists": [
+                "Sidhu Moose Wala",
+                "Steel Banglez",
+                "Fredo"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27363e5100d76fae3563d627f11",
+            "duration": 212720,
+            "album": "Attach",
+            "context_uri": "spotify:album:6DB7R2re4tUi2oak4SoLwV",
+            "track_number": 1
+        },
+        {
+            "id": "3txE0SZnwamBhYB2ZQtHwU",
+            "name": "Goin' Off",
+            "artists": [
+                "Karan Aujla",
+                "Mxrci"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273c9f8b21d174ffd1c29ed7661",
+            "duration": 163000,
+            "album": "Goin' Off",
+            "context_uri": "spotify:album:3uXGbWKTUkC14RmbgjTQlM",
+            "track_number": 1
+        },
+        {
+            "id": "4eBvRhTJ2AcxCsbfTUjoRp",
+            "name": "Cheques",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2731a8c4618eda885a406958dd0",
+            "duration": 183756,
+            "album": "Still Rollin",
+            "context_uri": "spotify:album:5AivaZj0CiQJoDWqVH2pbh",
+            "track_number": 3
+        },
+        {
+            "id": "55nRhkhe7ckZhazYrv6ZOX",
+            "name": "Distance Love",
+            "artists": [
+                "Zehr Vibe"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2736b3733e73fe3d3c903788915",
+            "duration": 210681,
+            "album": "Distance Love",
+            "context_uri": "spotify:album:0FSTdbfd0XFtEjWK8VCjgY",
+            "track_number": 1
+        },
+        {
+            "id": "4fnIORP0QTYTOMPqMKpJtF",
+            "name": "Drippy",
+            "artists": [
+                "Sidhu Moose Wala",
+                "Mxrci",
+                "AR Paisley"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273d20559cc286e592ebf0240c8",
+            "duration": 195200,
+            "album": "Drippy",
+            "context_uri": "spotify:album:7xlh4JhUD65QX1HzN2guSX",
+            "track_number": 1
+        },
+        {
+            "id": "64mInfKzmJIbuTvcnhRgfW",
+            "name": "Showstopper",
+            "artists": [
+                "JERRY"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273b5c246e9316c7226634740a6",
+            "duration": 146062,
+            "album": "Showstopper",
+            "context_uri": "spotify:album:1KVirmPrDEhMyG54GfSSWz",
+            "track_number": 1
+        },
+        {
+            "id": "3VwIFCFQ6HQNzlQPfJBrt7",
+            "name": "Ittar",
+            "artists": [
+                "Jasmine Sandlas",
+                "B Praak"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273d62a1c8887ce4683ec42ed05",
+            "duration": 200930,
+            "album": "Ittar",
+            "context_uri": "spotify:album:1SXRKGIPXXWHlFH5FIh8iS",
+            "track_number": 1
+        },
+        {
+            "id": "7KmCQLSSde0UX5OqCgvGN9",
+            "name": "ANTIDOTE",
+            "artists": [
+                "Karan Aujla"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273f9d66911f25fcb4b3b7d5cd3",
+            "duration": 187332,
+            "album": "Four Me",
+            "context_uri": "spotify:album:09LRfKybx7mDRlMtysHrcX",
+            "track_number": 3
+        },
+        {
+            "id": "34Fh4HXZmnuBdtgejWUZg2",
+            "name": "Dekhha Tenu (From \"Mr. And Mrs. Mahi\")",
+            "artists": [
+                "Mohammad Faiz",
+                "Jaani"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273c3be0e4563f5564640effc13",
+            "duration": 281511,
+            "album": "Dekhha Tenu (From \"Mr. And Mrs. Mahi\")",
+            "context_uri": "spotify:album:1C3FmwSQAbjnZR6GRgnWQc",
+            "track_number": 1
+        },
+        {
+            "id": "5ZLkihi6DVsHwDL3B8ym1t",
+            "name": "One Love",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273d7eb20034ff1c7b7bb3629de",
+            "duration": 159222,
+            "album": "One Love",
+            "context_uri": "spotify:album:3tNH9Fp4dm3qa3Kr4cv5uJ",
+            "track_number": 1
+        },
+        {
+            "id": "07X7p4jFhHEECps5IBKQ3c",
+            "name": "Dekhya Kite",
+            "artists": [
+                "Davy",
+                "Gur Sidhu",
+                "Simar Kaur"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27398075ec1daa67ec279e92c31",
+            "duration": 182000,
+            "album": "Dekhya Kite",
+            "context_uri": "spotify:album:2zPnY5L7hwCjuYmpuCCAO5",
+            "track_number": 1
+        },
+        {
+            "id": "72vuBPMhwFNlSYpTSf6fVD",
+            "name": "Hass Hass",
+            "artists": [
+                "Diljit Dosanjh",
+                "Sia",
+                "Greg Kurstin"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27374a99276badeec2675a9eaec",
+            "duration": 153016,
+            "album": "Hass Hass",
+            "context_uri": "spotify:album:7F8VISoJUWFEY57b66QZxC",
+            "track_number": 1
+        },
+        {
+            "id": "1ExaQYPap38faw3FEqKcGY",
+            "name": "Koka",
+            "artists": [
+                "Mankirt Aulakh",
+                "Simar Kaur"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273b3ffb9442186c7053bb0fb72",
+            "duration": 190000,
+            "album": "Koka",
+            "context_uri": "spotify:album:1LpS06pxJRRmE3DzEpywe3",
+            "track_number": 1
+        },
+        {
+            "id": "6oz1L5jcqZWYuId7nxvIan",
+            "name": "Still Rollin",
+            "artists": [
+                "Shubh"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2731a8c4618eda885a406958dd0",
+            "duration": 174730,
+            "album": "Still Rollin",
+            "context_uri": "spotify:album:5AivaZj0CiQJoDWqVH2pbh",
+            "track_number": 1
+        },
+        {
+            "id": "2uWZ7EGddFlA1DJ3Rzzvs2",
+            "name": "Bachke Bachke (feat. Yarah)",
+            "artists": [
+                "Karan Aujla",
+                "Ikky",
+                "Yarah"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273bb25239324c4e16ae01fda36",
+            "duration": 210117,
+            "album": "Making Memories",
+            "context_uri": "spotify:album:3BGU0BqGwBkYDHpfCWFm7I",
+            "track_number": 9
+        },
+        {
+            "id": "03yKEFruN3BS2coglBtt2N",
+            "name": "Rubicon Drill",
+            "artists": [
+                "Laddi Chahal",
+                "Parmish Verma",
+                "Gurlez Akhtar"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273c276297a34fb43c1a3418a08",
+            "duration": 188571,
+            "album": "Forever",
+            "context_uri": "spotify:album:4qlI6YM61j9NeGe832mExq",
+            "track_number": 1
+        },
+        {
+            "id": "3s6bB02odIXvM3OpnqgzNN",
+            "name": "Ayee",
+            "artists": [
+                "Harnoor",
+                "Jassa Dhillon",
+                "Ilam"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273e5b38c26815fe1167a6fd27b",
+            "duration": 146526,
+            "album": "Ayee",
+            "context_uri": "spotify:album:0kk2Nm0O28gQLXVhaznomg",
+            "track_number": 1
+        },
+        {
+            "id": "0xIuPDzJSnJywALez8dwKR",
+            "name": "With You",
+            "artists": [
+                "AP Dhillon"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27382549c22cd3c6e03351bd1c5",
+            "duration": 154554,
+            "album": "With You",
+            "context_uri": "spotify:album:30eM1PJ8qLZJeEykhcje0j",
+            "track_number": 1
+        },
+        {
+            "id": "49aQ9RbGCOEu8oxkYr8Ous",
+            "name": "Rhyme Ain’t Done",
+            "artists": [
+                "Navaan Sandhu",
+                "Saabi Bhinder",
+                "Bajwa"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273e8619fc28baf611c6c1aa244",
+            "duration": 181401,
+            "album": "The Finest",
+            "context_uri": "spotify:album:47gUYtnZNZBbbcwc6YMdAy",
+            "track_number": 5
+        },
+        {
+            "id": "32VAw8DL9ixX5XSW2VLcZ4",
+            "name": "Aam Jahe Munde",
+            "artists": [
+                "Parmish Verma",
+                "PARDHAAN",
+                "Desi Crew"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27328c90366eb01fbb476a981e4",
+            "duration": 207838,
+            "album": "Aam Jahe Munde",
+            "context_uri": "spotify:album:0VtFj2jJ3PosFrLHbE7TJX",
+            "track_number": 1
+        },
+        {
+            "id": "6NJ8Z5GDoHe47R6gGX6sLq",
+            "name": "Admirin' You (feat. Preston Pablo)",
+            "artists": [
+                "Karan Aujla",
+                "Ikky",
+                "Preston Pablo"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2734c54db9dbdd736413e294daa",
+            "duration": 214750,
+            "album": "Admirin' You (feat. Preston Pablo)",
+            "context_uri": "spotify:album:2rSFhbKldPsvtXI5IuseAF",
+            "track_number": 1
+        },
+        {
+            "id": "0TdWXMXyfTQ2qp5vvU9LID",
+            "name": "Case",
+            "artists": [
+                "Diljit Dosanjh",
+                "Intense"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273cb2f9520171129a3df7a241a",
+            "duration": 135500,
+            "album": "Ghost",
+            "context_uri": "spotify:album:1d1FYLFpu2NITI6ilVaHDd",
+            "track_number": 17
+        },
+        {
+            "id": "3iNn2VvRJMpz5VLbEAH2r1",
+            "name": "My Prime",
+            "artists": [
+                "Navaan Sandhu",
+                "bebhumika"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273b2a5ca0f09e3a230a3b6b687",
+            "duration": 250434,
+            "album": "Naveezy",
+            "context_uri": "spotify:album:5s97Jucf39sW9uP10l77nT",
+            "track_number": 2
+        },
+        {
+            "id": "2zkp8sFTnlN7xBrxnG5PA6",
+            "name": "What...?",
+            "artists": [
+                "Karan Aujla",
+                "Ikky"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273bb25239324c4e16ae01fda36",
+            "duration": 146500,
+            "album": "Making Memories",
+            "context_uri": "spotify:album:3BGU0BqGwBkYDHpfCWFm7I",
+            "track_number": 2
+        },
+        {
+            "id": "0biuGbhZwYnuUwMOi4fvaN",
+            "name": "Attraction",
+            "artists": [
+                "Sukha",
+                "Prodgk"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273ee877533f19e0181a38e82ea",
+            "duration": 183169,
+            "album": "Attraction",
+            "context_uri": "spotify:album:2916WaelFJZ8rzD77tVjnZ",
+            "track_number": 1
+        },
+        {
+            "id": "3xsUWTwx4m4cYgpueIPOWi",
+            "name": "Rubicon",
+            "artists": [
+                "Prem Dhillon",
+                "Rass"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27360dcf8dc5c72350bb3a33d4b",
+            "duration": 251917,
+            "album": "Rubicon",
+            "context_uri": "spotify:album:78eM6G2sL4H255Zq1UslaJ",
+            "track_number": 1
+        },
+        {
+            "id": "3GEiVoaUXq468gfYs2EPfh",
+            "name": "Chorni",
+            "artists": [
+                "DIVINE",
+                "Sidhu Moose Wala"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27392c32f95f518a1153a339117",
+            "duration": 181000,
+            "album": "Chorni",
+            "context_uri": "spotify:album:5zGHPCBVVX3L7UADaS2AQ8",
+            "track_number": 1
+        },
+        {
+            "id": "28lvraTNIN8qiTpoIK7m8Z",
+            "name": "True Stories",
+            "artists": [
+                "AP Dhillon",
+                "Shinda Kahlon"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273d5bf86c4e1fd46800b122641",
+            "duration": 117972,
+            "album": "True Stories",
+            "context_uri": "spotify:album:7JABHOzxcWGwmihIUq13dl",
+            "track_number": 1
+        },
+        {
+            "id": "42TMa2hgBNjte4uV7jNCnQ",
+            "name": "Baller",
+            "artists": [
+                "Shubh",
+                "Ikky"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27352919a0cb296d317f6bbeebd",
+            "duration": 148188,
+            "album": "Baller",
+            "context_uri": "spotify:album:44aCFqUbG06fL58kqpMp8p",
+            "track_number": 1
+        },
+        {
+            "id": "2NmBCDkjvJVvEZkH5QDOeb",
+            "name": "Thaa",
+            "artists": [
+                "Varinder Brar",
+                "Rav Dhaliwal",
+                "Ultra Beats"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b2737c99b9803df35d9f31ad2142",
+            "duration": 181340,
+            "album": "Thaa",
+            "context_uri": "spotify:album:6u5RdRVp5HBStyPRWvHcgm",
+            "track_number": 1
+        },
+        {
+            "id": "0dDDt47pVAToheSPh12utX",
+            "name": "Death Row",
+            "artists": [
+                "Ninja",
+                "J.Hind",
+                "Deep Jandu"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273daebb82ee483ec8ee511142f",
+            "duration": 185429,
+            "album": "Death Row",
+            "context_uri": "spotify:album:7oq6Bm8RUggWkrXdsBMgfm",
+            "track_number": 1
+        },
+        {
+            "id": "4SJMuaIYcBS8ke96lDYOsw",
+            "name": "On Top",
+            "artists": [
+                "Karan Aujla"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273865c8db3cbe7293861942aa2",
+            "duration": 183428,
+            "album": "On Top",
+            "context_uri": "spotify:album:6ephunHyThVj3tQkGgZKpJ",
+            "track_number": 1
+        },
+        {
+            "id": "60suOlM8VpTVITPFeqth8r",
+            "name": "Sarkar",
+            "artists": [
+                "Jaura Phagwara"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b27383ceabf9ed4838391a433c3f",
+            "duration": 210116,
+            "album": "Sarkar",
+            "context_uri": "spotify:album:231Z0iuk1T5XtEIFAnRil0",
+            "track_number": 1
+        },
+        {
+            "id": "6Z4rRhYZVQsYKmrxD40tru",
+            "name": "Obsessed",
+            "artists": [
+                "Riar Saab",
+                "Abhijay Sharma"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273a90a3cbabaee190af2f972bf",
+            "duration": 190444,
+            "album": "Obsessed",
+            "context_uri": "spotify:album:3LyafXRRJVEfcjTMr1N8Mu",
+            "track_number": 1
+        },
+        {
+            "id": "1C6auFaK08OhOTJ8bfrAiG",
+            "name": "Dilawara",
+            "artists": [
+                "The PropheC",
+                "Ezu"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273ffbe5473e4bd1512333ee483",
+            "duration": 222827,
+            "album": "Dilawara",
+            "context_uri": "spotify:album:6Q9uRhFdTKxWGItb71JcQh",
+            "track_number": 1
+        },
+        {
+            "id": "7FVgT8XjxUSfKuZuHxg316",
+            "name": "Todh",
+            "artists": [
+                "Prince Narula",
+                "Munawar Faruqui",
+                "Rony Ajnali"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273656f1d019587fb2eca3c85a0",
+            "duration": 236800,
+            "album": "Todh",
+            "context_uri": "spotify:album:1Bizgnf47ZtwxKiQtTDMrx",
+            "track_number": 1
+        },
+        {
+            "id": "0j9Y4rbP8dkNipKoCR1gva",
+            "name": "Shape",
+            "artists": [
+                "Kaka"
+            ],
+            "posterSrc": "https://i.scdn.co/image/ab67616d0000b273b5ab084618bd8ede0f2f173d",
+            "duration": 197892,
+            "album": "Another Side",
+            "context_uri": "spotify:album:3wd8Hr4S8649tc3kTuy3ch",
+            "track_number": 4
+        }
+    ]
+}
