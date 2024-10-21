@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { useStateProvider } from "../utils/StateProvider";
-import { reducerCases } from "../utils/Constants";
+import useAuthToken from "./";
 import axios from "axios";
 
-const useFetchUser = (token) => {
-  const [, dispatch] = useStateProvider();
+const useFetchUser = () => {
+  const { userInfo, setUserInfo } = useStateProvider();
+  const { token } = useAuthToken();
+
   useEffect(() => {
     const getUserInfo = async () => {
       try {
@@ -14,23 +16,25 @@ const useFetchUser = (token) => {
             "Content-Type": "application/json",
           },
         });
-        const userInfo = {
+
+        const currentUserInfo = {
           userName: data.display_name,
           userId: data.id,
           userEmail: data.email,
-          userProfilePicture: data.images[1]?.url,
+          userProfilePicture:
+            data.images.length > 0 ? data.images[0]?.url : null,
         };
-        
-        dispatch({ type: reducerCases.SET_USER, userInfo });
+
+        setUserInfo(currentUserInfo);
       } catch (error) {
         console.error("Error fetching user info:", error);
       }
     };
 
-    if (token) {
-      getUserInfo();
-    }
-  }, [token, dispatch]);
+    if (token) getUserInfo();
+  }, [token, setUserInfo]);
+
+  return userInfo;
 };
 
 export default useFetchUser;

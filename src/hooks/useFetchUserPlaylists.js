@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { useStateProvider } from "../utils/StateProvider";
-import { reducerCases } from "../utils/Constants";
+import useAuthToken from "./useAuthToken";
 
-const useFetchUserPlaylists = (token) => {
-  const [, dispatch] = useStateProvider();
-  const [playlists, setPlaylists] = useState([]);
+const useFetchUserPlaylists = () => {
+  const { userPlaylist, setUserPlaylist } = useStateProvider();
+  const { token } = useAuthToken();
 
   useEffect(() => {
     const getPlaylistData = async () => {
@@ -34,8 +34,7 @@ const useFetchUserPlaylists = (token) => {
           };
         });
 
-        setPlaylists(formattedPlaylists);
-        dispatch({ type: reducerCases.SET_USER_PLAYLISTS, formattedPlaylists });
+        setUserPlaylist(formattedPlaylists);
       } catch (error) {
         console.error("Error fetching playlists:", error);
       }
@@ -44,7 +43,7 @@ const useFetchUserPlaylists = (token) => {
     getPlaylistData();
   }, [token]);
 
-  return playlists;
+  return userPlaylist;
 };
 
 export default useFetchUserPlaylists;

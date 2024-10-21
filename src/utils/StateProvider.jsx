@@ -1,11 +1,25 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const StateContext = createContext();
 
-export const StateProvider = ({ children, initialState, reducer }) => (
-  <StateContext.Provider value={useReducer(reducer, initialState)}>
-    {children}
-  </StateContext.Provider>
-);
+export const StateProvider = ({ children }) => {
+  const [userInfo, setUserInfo] = useState({});
+  const [userPlaylist, setUserPlaylist] = useState(null);
+  const [currentTrackId, setCurrentTrackId] = useState("");
+  const [activePlaylistId, setActivePlaylistId] = useState("");
+  const [activePlaylistData, setActivePlaylistData] = useState(null);
+
+  return (
+    <StateContext.Provider value={{
+      userInfo, setUserInfo,
+      userPlaylist, setUserPlaylist,
+      currentTrackId, setCurrentTrackId,
+      activePlaylistId, setActivePlaylistId,
+      activePlaylistData, setActivePlaylistData
+    }}>
+      {children}
+    </StateContext.Provider>
+  );
+};
 
 export const useStateProvider = () => useContext(StateContext);
