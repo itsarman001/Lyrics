@@ -28,6 +28,7 @@ const useGetFeaturedPlaylist = (limit = 10) => {
             poster: playlist.images[0].url,
           })),
         };
+        console.log(data)
         setFeaturedPlaylist(data);
       } catch (error) {
         console.error("Error fetching featured playlists:", error);

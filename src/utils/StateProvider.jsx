@@ -6,6 +6,7 @@ export const StateProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState({});
   const [userPlaylist, setUserPlaylist] = useState(null);
   const [currentTrackId, setCurrentTrackId] = useState("");
+  const [currentTrack, setCurrentTrack] = useState("");
   const [activePlaylistId, setActivePlaylistId] = useState("");
   const [activePlaylistData, setActivePlaylistData] = useState(null);
 
@@ -14,6 +15,7 @@ export const StateProvider = ({ children }) => {
       userInfo, setUserInfo,
       userPlaylist, setUserPlaylist,
       currentTrackId, setCurrentTrackId,
+      currentTrack, setCurrentTrack,
       activePlaylistId, setActivePlaylistId,
       activePlaylistData, setActivePlaylistData
     }}>

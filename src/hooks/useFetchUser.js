@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useStateProvider } from "../utils/StateProvider";
-import useAuthToken from "./";
+import useAuthToken from './useAuthToken'
 import axios from "axios";
 
 const useFetchUser = () => {

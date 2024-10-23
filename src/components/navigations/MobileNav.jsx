@@ -4,7 +4,7 @@ import { CircleUserRound } from "lucide-react";
 import { useStateProvider } from "../../utils/StateProvider";
 
 const MobileNav = ({ NAVIGATIONS }) => {
-  const [{ userInfo }] = useStateProvider(); 
+  const { userInfo } = useStateProvider(); 
 
   return (
     <nav className="bg-primary border-t-2 border-neutral w-full h-20 flex justify-between items-center px-4 shadow-md">

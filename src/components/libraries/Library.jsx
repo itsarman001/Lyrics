@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useFetchPlaylist } from "../../hooks";
-import { Play, Heart } from "lucide-react";
+import { useStateProvider } from "../../utils/StateProvider";
 import { Tracks } from "../";
+import { Play, Heart } from "lucide-react";
 
 const Library = () => {
   const { id } = useParams();
   const playlistData = useFetchPlaylist(id);
+  const { currentTrackId } = useStateProvider();
+
+  useEffect(() => {
+    console.log(currentTrackId);
+  }, [currentTrackId]);
 
   if (!playlistData) {
     return <div>Loading...</div>;
@@ -45,7 +51,6 @@ const Library = () => {
           </div>
         </div>
       </div>
-
       {/* Tracks List */}
       <ul className="w-full lg:w-3/5 p-4 flex-1 overflow-y-auto">
         {playlistData.tracks.map((track, index) => (
@@ -56,6 +61,7 @@ const Library = () => {
               title={track.name}
               subtitle={track.artists.join(", ")}
               index={index + 1}
+              id={track.id}
             />
           </li>
         ))}

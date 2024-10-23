@@ -1,4 +1,4 @@
-const clientId = "";
+const clientId = "b575f283419346fbbf1960883c39234a";
 // Due to some issue had to use hard coded client Id will fix it later in next version.
 const redirectUri = "http://localhost:5173/";
 const apiUrl = "https://accounts.spotify.com/authorize";

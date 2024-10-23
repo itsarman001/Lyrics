@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Play } from "lucide-react";
+import { useStateProvider } from "../../utils/StateProvider";
 
-const Tracks = ({ src, alt, title, subtitle, index }) => {
+const Tracks = ({ src, alt, title, subtitle, index, id }) => {
+  const { setCurrentTrackId } = useStateProvider();
+
   return (
     <div className="flex items-center justify-between hover:bg-[#4f5661] p-2 rounded-md">
       <div className="flex items-center gap-4">
@@ -16,7 +19,10 @@ const Tracks = ({ src, alt, title, subtitle, index }) => {
       </div>
       <div className="flex items-center gap-4">
         <div>03:55 Mins</div>
-        <div className="p-2 bg-accent rounded-full">
+        <div
+          className="p-2 bg-accent rounded-full"
+          onClick={() => setCurrentTrackId(id)}
+        >
           <Play />
         </div>
       </div>

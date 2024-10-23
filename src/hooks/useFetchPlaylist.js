@@ -35,19 +35,19 @@ const useFetchPlaylist = (playlistId) => {
           playlistDescription: response.data.description.startsWith("<a")
             ? ""
             : response.data.description,
-          posterSrc: response.data.images[0]?.url, // Use optional chaining
+          posterSrc: response.data.images[0]?.url, 
           tracks: response.data.tracks.items.map(({ track }) => ({
             id: track.id,
             name: track.name,
             artists: track.artists.map((artist) => artist.name),
-            posterSrc: track.album.images[0]?.url, // Use optional chaining
+            posterSrc: track.album.images[0]?.url,
             duration: track.duration_ms,
             album: track.album.name,
             context_uri: track.album.uri,
             track_number: track.track_number,
           })),
         };
-
+        console.log(response)
         setActivePlaylistData(selectedPlaylist);
       } catch (error) {
         console.error("Error fetching playlist:", error);
