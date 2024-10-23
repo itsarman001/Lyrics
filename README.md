@@ -12,7 +12,6 @@ This is a music streaming application built using React, Context API, Tailwind C
 ### Technologies:
 
 * Frontend: React, Context API, Tailwind CSS
-* Backend: (Optional, depending on implementation) Node.js with Express (for authentication or API calls)
 * API: Spotify Web API
 
 ### Prerequisites:
