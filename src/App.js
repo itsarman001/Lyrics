@@ -1,7 +1,14 @@
-import React from "react";
+import { useAuthToken } from "./hooks";
+import { Login, BaseLayout } from "./pages";
+
 
 const App = () => {
-  return <div>Lyrics Version 1.0</div>;
+const {token} = useAuthToken(); 
+  return (
+    <>
+      {token ? <BaseLayout /> :  <Login />}
+    </>
+  );
 };
 
 export default App;
