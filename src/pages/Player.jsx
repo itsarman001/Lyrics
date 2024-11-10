@@ -1,42 +1,32 @@
-import { useEffect, useState, useRef } from 'react';
-import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import React, { useContext, useEffect, useState } from 'react';
+import { Play, Pause, Volume2, VolumeX, } from 'lucide-react';
+import { AudioContext } from '../utils/AudioContext';  
 import { useStateProvider } from '../utils/stateProvider';
 
 const Player = () => {
-  const { currentTrack } = useStateProvider();
+  const { currentTrack: stateCurrentTrack } = useStateProvider();
+  const { currentTrack, setCurrentTrack, isPlaying, handlePlayPause, volume, increaseVolume, decreaseVolume, handleVolumeChange } = useContext(AudioContext);
   const [trackData, setTrackData] = useState(null);
-  const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5);
 
   useEffect(() => {
-    if (currentTrack) {
-      setTrackData(currentTrack);
+    if (stateCurrentTrack) {
+      setCurrentTrack(stateCurrentTrack);
     } else {
       const storedTrack = sessionStorage.getItem('currentTrack');
       if (storedTrack) {
         setTrackData(JSON.parse(storedTrack));
       }
     }
-  }, [currentTrack]);
+  }, [stateCurrentTrack, setCurrentTrack]);
 
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
+    if (currentTrack) {
+      setTrackData(currentTrack);
     }
-  }, [volume]);
+  }, [currentTrack]);
 
-  const handlePlayPause = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  const handleVolumeChange = (e) => {
-    setVolume(e.target.value);
+  const handleVolumeSliderChange = (e) => {
+    handleVolumeChange(parseFloat(e.target.value));
   };
 
   if (!trackData) return <div className="text-center mt-8">No track selected.</div>;
@@ -50,28 +40,25 @@ const Player = () => {
         alt={trackData.name}
         className="mt-4 w-64 h-64 object-cover rounded-sm sm:w-3/4 md:w-1/2"
       />
-      <audio ref={audioRef} src={trackData.previewUrl} onEnded={() => setIsPlaying(false)} />
 
       <div className="flex items-center justify-between my-2 space-x-4">
         <button onClick={handlePlayPause} className="p-2 rounded-full bg-blue-500 hover:bg-blue-600">
           {isPlaying ? <Pause size={24} /> : <Play size={24} />}
         </button>
         <div className="flex items-center p-4 space-x-4">
-        <VolumeX size={24} />
-        <input 
-          type="range" 
-          min="0" 
-          max="1" 
-          step="0.01" 
-          value={volume} 
-          onChange={handleVolumeChange} 
-          className="w-full"
-        />
-        <Volume2 size={24} />
+          <VolumeX size={24} onClick={decreaseVolume} />
+          <input 
+            type="range" 
+            min="0" 
+            max="1" 
+            step="0.01" 
+            value={volume} 
+            onChange={handleVolumeSliderChange}
+            className="w-full"
+          />
+          <Volume2 size={24} onClick={increaseVolume} />
+        </div>
       </div>
-      </div>
-
-      
     </div>
   );
 };
