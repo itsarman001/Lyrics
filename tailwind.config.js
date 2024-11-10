@@ -14,6 +14,7 @@ module.exports = {
         "secondary-hover": "#444444",
         "light": "#f2f2f2",
       },
+      backdropBlur: ['responsive'],
     },
   },
   plugins: [],

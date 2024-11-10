@@ -32,7 +32,7 @@ const useFetchPlaylist = () => {
             name: item.track.name,
             artist: item.track.artists[0]?.name,
             album: item.track.album.name,
-            previewImg: item.track.images?.[0]?.url || "",
+            previewImg: item.track.album.images?.[0]?.url || "",
             duration: item.track.duration_ms,
             previewUrl: item.track.preview_url,
             url: item.track.external_urls.spotify,

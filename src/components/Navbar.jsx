@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import navbarItems from "./navbarItems";
 import { BrandName } from "./";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gradient-to-r from-secondary to-secondary-hover text-light p-4 flex items-center justify-between">
+    <nav className="backdrop-blur-lg bg-white/20 text-light p-4 flex items-center justify-between shadow-lg">
       <BrandName />
       <ul className="flex space-x-8">
         {navbarItems.map((item) => (

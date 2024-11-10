@@ -18,11 +18,11 @@ const Profile = () => {
     <section className="h-full w-full flex items-center flex-col lg:flex-row lg:items-start lg:gap-8 py-8 px-4 lg:p-28">
       <div>
         <div className="flex flex-col items-center">
-          <div className="w-40 h-40 lg:w-full lg:h-full mb-4">
+          <div className="w-40 h-40 mb-4">
             <img
               src={user.profile}
               alt={user.name}
-              className="rounded-full lg:rounded-md w-full h-full object-cover shadow-lg"
+              className="rounded-full w-full h-full object-cover shadow-lg"
             />
           </div>
           <h3 className="text-2xl font-semibold">{user.name}</h3>

@@ -7,8 +7,8 @@ const BaseLayout = () => {
     <main className="h-screen w-screen bg-primary text-light flex flex-col">
       <Navbar />
 
-      {/* Main content area */}
-      <section className="flex-1 overflow-auto">
+      {/* Main content area with padding for mobile navbar */}
+      <section className="flex-1 overflow-auto py-8 pb-16 lg:pb-8">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
