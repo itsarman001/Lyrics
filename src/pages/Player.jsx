@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Play, Pause, Volume2, VolumeX, } from 'lucide-react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
+import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import { AudioContext } from '../utils/AudioContext';  
 import { useStateProvider } from '../utils/stateProvider';
 
@@ -7,6 +7,7 @@ const Player = () => {
   const { currentTrack: stateCurrentTrack } = useStateProvider();
   const { currentTrack, setCurrentTrack, isPlaying, handlePlayPause, volume, increaseVolume, decreaseVolume, handleVolumeChange } = useContext(AudioContext);
   const [trackData, setTrackData] = useState(null);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (stateCurrentTrack) {
@@ -25,6 +26,23 @@ const Player = () => {
     }
   }, [currentTrack]);
 
+  useEffect(() => {
+    // Function to handle play on user interaction
+    const handleUserInteraction = () => {
+      if (audioRef.current && audioRef.current.paused) {
+        audioRef.current.play().catch(error => {
+          console.error('Playback failed:', error);
+        });
+      }
+    };
+
+    document.addEventListener('click', handleUserInteraction);
+
+    return () => {
+      document.removeEventListener('click', handleUserInteraction);
+    };
+  }, []);
+
   const handleVolumeSliderChange = (e) => {
     handleVolumeChange(parseFloat(e.target.value));
   };
@@ -40,6 +58,8 @@ const Player = () => {
         alt={trackData.name}
         className="mt-4 w-64 h-64 object-cover rounded-sm sm:w-3/4 md:w-1/2"
       />
+
+      <audio ref={audioRef} src={trackData.audioUrl} />
 
       <div className="flex items-center justify-between my-2 space-x-4">
         <button onClick={handlePlayPause} className="p-2 rounded-full bg-blue-500 hover:bg-blue-600">
