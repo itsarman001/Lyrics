@@ -4,7 +4,7 @@ import { BrandName } from "./";
 
 const Navbar = () => {
   return (
-    <nav className="bg-primary text-light p-4 flex items-center justify-between shadow-lg backdrop-blur-lg">
+    <nav className="bg-primary text-light p-4 flex items-center justify-between shadow-lg backdrop-blur-lg border-b-2 border-light">
       {/* Brand */}
       <BrandName />
 

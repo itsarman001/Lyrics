@@ -4,5 +4,6 @@ import useFetchUserPlaylists from './useFetchUserPlaylists';
 import useFetchPlaylist from './useFetchPlaylist'
 import useFetchCategories from './useFetchCategories'
 import useFetchNewReleases from './useFetchNewReleases'
+import useFetchAlbum from './useFetchAlbum'
 
-export { useAuthToken, useFetchUser, useFetchUserPlaylists, useFetchPlaylist, useFetchCategories, useFetchNewReleases };
+export { useAuthToken, useFetchUser, useFetchUserPlaylists, useFetchPlaylist, useFetchCategories, useFetchNewReleases, useFetchAlbum };

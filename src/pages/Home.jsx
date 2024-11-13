@@ -1,10 +1,13 @@
 import React from "react";
-import { useFetchCategories, useFetchNewReleases } from "../hooks";
+import { useFetchCategories, useFetchNewReleases, useFetchAlbum } from "../hooks";
 import { Heading, Card } from "../components";
 
 const Home = () => {
   const categories = useFetchCategories();
   const releases = useFetchNewReleases(5);
+  // console.log(releases)
+  // const album = useFetchAlbum("6mHNMtHrXIdUWWuZD9njsG")
+  // console.log(album)
 
   if (!categories || !releases) {
     return <div className="text-center text-light">Loading...</div>;
