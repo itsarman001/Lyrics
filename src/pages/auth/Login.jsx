@@ -2,8 +2,10 @@ import { BrandName } from "../../components";
 
 const Login = () => {
   const clientId = process.env.REACT_APP_SPOTIFY_WEBAPI_CLIENT_ID;
-  // *TODO* : Due to some Rissue had to use hard coded client Id will fix it later in next version.
-  const redirectUri = "http://localhost:3000/";
+   const redirectUri = "https://lyrics-red.vercel.app/";
+
+  // For Development Purpose only
+  // const redirectUri = "http://localhost:3000/";
   const apiUrl = "https://accounts.spotify.com/authorize";
   const scopes = [
     "user-read-playback-state",
