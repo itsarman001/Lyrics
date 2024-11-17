@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import axios from "axios";
-import { useStateProvider } from "../utils/stateProvider";
+import { useStateProvider } from "../utils/StateProvider";
 import useAuthToken from "./useAuthToken";
 
 const useFetchUserPlaylists = () => {

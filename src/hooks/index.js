@@ -1,9 +1,9 @@
 import useAuthToken from "./useAuthToken";
 import useFetchUser from './useFetchUser';
 import useFetchUserPlaylists from './useFetchUserPlaylists';
-import useFetchPlaylist from './useFetchPlaylist'
 import useFetchCategories from './useFetchCategories'
 import useFetchNewReleases from './useFetchNewReleases'
-import useFetchAlbum from './useFetchAlbum'
+import useFetchTracks from './useFetchTracks'
+import useFetchTrack from './useFetchTrack'
 
-export { useAuthToken, useFetchUser, useFetchUserPlaylists, useFetchPlaylist, useFetchCategories, useFetchNewReleases, useFetchAlbum };
+export { useAuthToken, useFetchUser, useFetchUserPlaylists, useFetchTracks, useFetchTrack, useFetchCategories, useFetchNewReleases, };

@@ -1,61 +1,61 @@
-import { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useStateProvider } from '../utils/stateProvider';
-import { useFetchPlaylist } from '../hooks';
-import Tracks from '../components/Tracks';
+import { useMemo, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useStateProvider } from "../utils/StateProvider";
+import { useFetchTracks } from "../hooks";
+import Tracks from "../components/Tracks";
 
 const Library = () => {
-  const { id } = useParams();
   const navigate = useNavigate();
-  const { setActivePlaylistId, setCurrentTrack } = useStateProvider();
-  const playlist = useFetchPlaylist(); // Fetch playlist data based on activePlaylistId
+  const { selectedId, selectedIdType } = useStateProvider();
 
-  useEffect(() => {
-    if (id) {
-      setActivePlaylistId(id);
-      sessionStorage.setItem('activePlaylistId', id);
-    } else {
-      const storedPlaylistId = sessionStorage.getItem('activePlaylistId');
-      if (storedPlaylistId) {
-        setActivePlaylistId(storedPlaylistId);
-      }
-    }
-  }, [id, setActivePlaylistId]);
+  // Memoize context values to prevent unnecessary re-renders
+  const memoizedSelectedId = useMemo(() => selectedId, [selectedId]);
+  const memoizedSelectedIdType = useMemo(() => selectedIdType, [selectedIdType]);
 
-  if (!playlist) return <div className="text-center mt-8">Loading...</div>;
-  if (!playlist.id) return <div className="text-center mt-8">No playlist selected.</div>;
+  const { data: playlist, loading, error } = useFetchTracks(memoizedSelectedId, memoizedSelectedIdType);
 
   const handleTrackClick = (track) => {
-    setCurrentTrack(track); // Save track to context
-    sessionStorage.setItem('currentTrack', JSON.stringify(track));
-    navigate(`/player`); // Navigate to the player with the track ID
+    // Save track to context and session storage
+    sessionStorage.setItem("currentTrack", JSON.stringify(track));
+    navigate(`/player`);
   };
 
+  if (loading) return <div>Loading...</div>;
+  if (error || !playlist) return <div>Error loading data. Please try again later.</div>;
+
   return (
-    <section className="p-4 lg:p-8">
-      <div className="flex items-center space-x-4 mb-6">
+    <section className="p-4 lg:p-8 bg-base text-light">
+      {/* Playlist Header */}
+      <div className="flex flex-col md:flex-row md:items-center md:space-x-4 mb-6">
         <img
-          src={playlist.imageUrl}
+          src={playlist.image}
           alt={playlist.name}
-          className="w-32 h-32 object-cover rounded-lg shadow-md"
+          className="w-32 h-32 object-cover rounded-lg shadow-md mx-auto md:mx-0"
         />
-        <div>
-          <h3 className="text-2xl font-semibold text-white">{playlist.name}</h3>
-          <p className="text-gray-400 mt-1">{playlist.description}</p>
+        <div className="mt-4 md:mt-0 text-center md:text-left">
+          <h3 className="text-xl md:text-2xl font-semibold text-accent">{playlist.name}</h3>
+          {playlist.additionalInfo?.description && (
+            <p className="text-sm md:text-base text-secondaryHover mt-1">
+              {playlist.additionalInfo.description}
+            </p>
+          )}
         </div>
       </div>
 
-      {/* Render Tracks */}
+      {/* Track List */}
       <div className="mt-6">
-        <h4 className="text-lg font-bold text-white mb-3">Tracks:</h4>
-        <ul className="space-y-4">
-          {playlist.tracks.map((track) => (
-            <li key={track.id} className=" p-3 rounded-md shadow hover:bg-secondary-dark transition">
+        <h4 className="text-lg font-bold text-accent mb-3">Tracks:</h4>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {playlist.additionalInfo?.tracks.map((track) => (
+            <li
+              key={track.id}
+              className="p-3 rounded-md shadow-md transition duration-200"
+            >
               <Tracks
                 title={track.name}
-                subtitle={`${track.artist} - ${track.album}`}
-                poster={track.previewImg || playlist.imageUrl} // Fix: Use fallback image if previewImg is unavailable
-                onClick={() => handleTrackClick(track)} 
+                subtitle={`${track.artists?.join(", ")} - ${track.album}`}
+                poster={track.image || playlist.image} // Fallback image
+                onClick={() => handleTrackClick(track)}
               />
             </li>
           ))}

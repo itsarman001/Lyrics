@@ -1,22 +1,29 @@
-import React from 'react';
-import { Play } from 'lucide-react';
+import React from "react";
+import { Play } from "lucide-react";
 
-const Card = ({ name, description, image, total_tracks, artists }) => {
+const Card = ({ name, description, image, total_tracks, artists, onClick }) => {
+  const fallbackImage = "https://via.placeholder.com/150"; // Use a fallback image if none is provided
+  
   return (
-    <div className="relative bg-secondary hover:bg-secondary-hover rounded-lg shadow-md p-4 w-48 transform transition-all hover:scale-105">
+    <div
+      className="group relative bg-secondary hover:bg-secondaryHover rounded-lg shadow-md p-4 w-48 transform transition-all hover:scale-105"
+      onClick={onClick} // Add the onClick handler here
+    >
       {/* Image and Play Button Container */}
-      <div className="relative">
+      <div className="relative overflow-hidden rounded-md">
         <img
-          className="rounded-md w-full h-40 object-cover mb-4"
-          src={image}
+          className="w-full h-40 object-cover mb-4 transition-transform duration-300 group-hover:scale-110"
+          src={image || fallbackImage} // Use fallback if image is undefined
           alt={name}
         />
-        
+
         {/* Play Button (visible on hover) */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-md">
-          <button className="p-2 bg-accent rounded-full hover:bg-accent-hover transform hover:scale-110 transition-all duration-200">
-            <Play className="w-6 h-6 text-dark" />
-          </button>
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div>
+            <button className="bg-accent p-3 rounded-full group-hover:bg-gradient-to-r group-hover:from-accentHover group-hover:to-accent transition duration-300 transform group-hover:scale-110 shadow-md group-hover:shadow-lg">
+              <Play className="text-primary group-hover:text-primaryHover transition duration-300 transform group-hover:rotate-45" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -28,7 +35,7 @@ const Card = ({ name, description, image, total_tracks, artists }) => {
             {artists.join(", ")}
           </p>
         )}
-        <p className="text-gray-400 text-xs mt-2">Tracks: {total_tracks}</p>
+        <p className="text-light text-xs mt-2">Tracks: {total_tracks}</p>
       </div>
     </div>
   );

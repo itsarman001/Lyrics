@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { StateProvider } from './utils/stateProvider';
+import { StateProvider } from './utils/StateProvider';
 import { AudioProvider } from './utils/AudioContext'; // Make sure the path is correct
 import { BrowserRouter } from 'react-router-dom';
 
