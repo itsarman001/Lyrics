@@ -1,110 +1,138 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
-import { Play, Pause, Volume2, VolumeX } from "lucide-react";
-import { AudioContext } from "../utils/AudioContext";
-import useFetchTrack from "../hooks/useFetchTrack"; // Import the hook
+import React, { useEffect, useState } from "react";
+import { useFetchTrack } from "../hooks";
+import { useAudioProvider } from "../utils/AudioContext";
 import { useStateProvider } from "../utils/StateProvider";
+import usePlayerControls from "../hooks/usePlayerControls";
+import { Play, Pause, SkipBack, SkipForward, Volume2 } from "lucide-react";
 
 const Player = () => {
-  const { currentTrack: stateCurrentTrack } = useStateProvider();
-  const {
-    currentTrack,
-    setCurrentTrack,
-    isPlaying,
-    handlePlayPause,
-    volume,
-    increaseVolume,
-    decreaseVolume,
-    handleVolumeChange,
-  } = useContext(AudioContext);
-  
-  // Get track ID from the current state or props
-  const trackId = stateCurrentTrack?.id;  // Assuming `stateCurrentTrack` contains the ID of the track
-  const { trackData, loading, error } = useFetchTrack(trackId); // Fetch track data using the hook
-  const audioRef = useRef(null);
+  const { setCurrentTrack, currentTrack, audioRef, isPlaying, setIsPlaying, volume } = useAudioProvider();
+  const { currentTrackId } = useStateProvider();
 
+  const [trackProgress, setTrackProgress] = useState(0); // For seekbar updates
+  const { trackData, loading, error } = useFetchTrack(currentTrackId);
+
+  const {
+    playPause,
+    seekForward,
+    seekBackward,
+    handleSeekBarChange,
+    handleVolumeChange,
+  } = usePlayerControls();
+
+  // Update current track and set the audio source
   useEffect(() => {
     if (trackData) {
-      setCurrentTrack(trackData);  // Set the fetched track as the current track
+      setCurrentTrack(trackData);
+      if (audioRef.current) {
+        audioRef.current.src = trackData.track.preview_url;
+        audioRef.current.addEventListener("timeupdate", updateProgress);
+        audioRef.current.addEventListener("ended", handleTrackEnd);
+      }
     }
-  }, [trackData, setCurrentTrack]);
-
-  useEffect(() => {
-    if (currentTrack) {
-      sessionStorage.setItem("currentTrack", JSON.stringify(currentTrack)); // Save the track data
-    }
-  }, [currentTrack]);
-
-  useEffect(() => {
-    const handleUserInteraction = () => {
-      if (audioRef.current && audioRef.current.paused) {
-        audioRef.current.play().catch((error) => {
-          console.error("Playback failed:", error);
-        });
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("timeupdate", updateProgress);
+        audioRef.current.removeEventListener("ended", handleTrackEnd);
       }
     };
+  }, [trackData, setCurrentTrack, audioRef]);
 
-    document.addEventListener("click", handleUserInteraction);
-
-    return () => {
-      document.removeEventListener("click", handleUserInteraction);
-    };
-  }, []);
-
-  const handleVolumeSliderChange = (e) => {
-    handleVolumeChange(parseFloat(e.target.value));
+  // Handle track progress updates
+  const updateProgress = () => {
+    setTrackProgress(audioRef.current?.currentTime || 0);
   };
 
-  if (loading) return <div className="text-center text-light mt-8">Loading...</div>;
-  if (error) return <div className="text-center text-light mt-8">{error}</div>;
-  if (!trackData) return <div className="text-center text-light mt-8">No track selected.</div>;
+  // Handle track end
+  const handleTrackEnd = () => {
+    setIsPlaying(false); // Reset the play button state when the track ends
+    setTrackProgress(0); // Reset progress
+  };
+
+  // Format time for seekbar
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  };
+
+  if (loading) return <div className="text-light">Loading...</div>;
+  if (error) return <div className="text-light">{error}</div>;
 
   return (
-    <div className="flex flex-col items-center p-6 w-full max-w-lg mx-auto bg-secondary rounded-lg shadow-md text-light">
-      <h2 className="text-2xl font-bold text-accent">{trackData.name}</h2>
-      <p className="text-sm text-light mt-1">{`${trackData.artist} - ${trackData.album}`}</p>
+    <div className="bg-primary text-light p-6 rounded-lg max-w-md mx-auto shadow-lg">
+      {/* Track Info Section */}
+      <div className="flex items-center space-x-4">
+        <img
+          src={trackData.album.images}
+          alt={trackData.track.name}
+          className="w-20 h-20 rounded shadow-md"
+        />
+        <div>
+          <h2 className="text-accent font-bold text-lg">{trackData.track.name}</h2>
+          <p className="text-secondary text-sm">{trackData.track.artists.join(", ")}</p>
+          <p className="text-secondary text-xs">Album: {trackData.album.name}</p>
+        </div>
+      </div>
 
-      <img
-        src={trackData.poster || trackData.previewImg}
-        alt={trackData.name}
-        className="mt-4 w-64 h-64 object-cover rounded-md shadow-lg"
-      />
+      {/* Seekbar */}
+      <div className="mt-4">
+        <input
+          type="range"
+          className="w-full accent-accentHover"
+          min="0"
+          max={audioRef.current?.duration || 100}
+          value={trackProgress}
+          onChange={handleSeekBarChange}
+        />
+        <div className="flex justify-between text-secondary text-sm mt-1">
+          <span>{formatTime(trackProgress)}</span>
+          <span>{formatTime(audioRef.current?.duration || 0)}</span>
+        </div>
+      </div>
 
-      <audio ref={audioRef} src={trackData.audioUrl} />
-
-      <div className="flex items-center justify-center my-4 space-x-4">
-        {/* Play/Pause Button */}
+      {/* Playback Controls */}
+      <div className="flex justify-between items-center mt-4">
         <button
-          onClick={handlePlayPause}
-          className="p-3 bg-accent rounded-full hover:bg-gradient-to-r hover:from-accentHover hover:to-accent transition-all duration-300 transform hover:scale-110 shadow-md"
+          className="bg-secondaryHover p-3 rounded-full hover:bg-secondary transition"
+          onClick={seekBackward}
         >
-          {isPlaying ? (
-            <Pause className="text-primary hover:text-primaryHover transition-all" size={24} />
-          ) : (
-            <Play className="text-primary hover:text-primaryHover transition-all" size={24} />
-          )}
+          <SkipBack size={20} />
+        </button>
+        <button
+          className="bg-accent p-3 rounded-full text-primary hover:bg-accentHover transition"
+          onClick={playPause}
+        >
+          {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+        </button>
+        <button
+          className="bg-secondaryHover p-3 rounded-full hover:bg-secondary transition"
+          onClick={seekForward}
+        >
+          <SkipForward size={20} />
         </button>
       </div>
 
-      <div className="flex items-center w-full px-4 space-x-4 mt-4">
-        <VolumeX
-          size={24}
-          className="text-secondaryHover cursor-pointer hover:text-light transition"
-          onClick={decreaseVolume}
-        />
+      {/* Volume Controls */}
+      <div className="flex items-center mt-4 space-x-4">
+        <Volume2 className="text-secondary" size={20} />
         <input
           type="range"
+          className="w-full accent-accentHover"
           min="0"
           max="1"
           step="0.01"
           value={volume}
-          onChange={handleVolumeSliderChange}
-          className="w-full accent-accent"
+          onChange={handleVolumeChange}
         />
-        <Volume2
-          size={24}
-          className="text-secondaryHover cursor-pointer hover:text-light transition"
-          onClick={increaseVolume}
-        />
+      </div>
+
+      {/* Queue Section */}
+      <div className="mt-6 bg-hover p-4 rounded text-light shadow-md">
+        <h4 className="font-bold text-sm mb-2">Queue (Work in Progress)</h4>
+        <ul>
+          <li className="text-secondary text-sm">Next/Previous Dummy</li>
+        </ul>
       </div>
     </div>
   );

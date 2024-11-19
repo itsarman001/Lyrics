@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useFetchCategories, useFetchNewReleases } from "../hooks";
 import { Heading, Card } from "../components";
 import { useStateProvider } from "../utils/StateProvider";
+import { useAudioProvider } from "../utils/AudioContext";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,7 +23,9 @@ const Home = () => {
   }
 
   if (!releases) {
-    return <div className="text-center text-light">Loading new releases...</div>;
+    return (
+      <div className="text-center text-light">Loading new releases...</div>
+    );
   }
 
   const handleReleaseClick = (id, type = "album") => {

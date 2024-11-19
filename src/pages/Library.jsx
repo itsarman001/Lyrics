@@ -6,7 +6,7 @@ import Tracks from "../components/Tracks";
 
 const Library = () => {
   const navigate = useNavigate();
-  const { selectedId, selectedIdType } = useStateProvider();
+  const { selectedId, selectedIdType, setCurrentTrackId } = useStateProvider();
 
   // Memoize context values to prevent unnecessary re-renders
   const memoizedSelectedId = useMemo(() => selectedId, [selectedId]);
@@ -14,10 +14,9 @@ const Library = () => {
 
   const { data: playlist, loading, error } = useFetchTracks(memoizedSelectedId, memoizedSelectedIdType);
 
-  const handleTrackClick = (track) => {
-    // Save track to context and session storage
-    sessionStorage.setItem("currentTrack", JSON.stringify(track));
-    navigate(`/player`);
+  const handleTrackClick = (trackId) => {
+    setCurrentTrackId(trackId)
+    navigate(`/player/${trackId}`);
   };
 
   if (loading) return <div>Loading...</div>;
@@ -54,8 +53,8 @@ const Library = () => {
               <Tracks
                 title={track.name}
                 subtitle={`${track.artists?.join(", ")} - ${track.album}`}
-                poster={track.image || playlist.image} // Fallback image
-                onClick={() => handleTrackClick(track)}
+                poster={track.image || playlist.image} 
+                onClick={() => handleTrackClick(track.id)}
               />
             </li>
           ))}

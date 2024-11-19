@@ -12,11 +12,12 @@ const BaseLayout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/player" element={<Player />} />
-          <Route path="/library/:id" element={<Library />} />{" "}
           {/* Dynamic ID parameter */}
-          <Route path="/library" element={<Library />} />{" "}
+          <Route path="/player/:id" element={<Player />} />
+          <Route path="/library/:id" element={<Library />} />{" "}
           {/* For direct access without ID */}
+          <Route path="/player" element={<Player />} />
+          <Route path="/library" element={<Library />} />{" "}
           <Route path="/profile" element={<Profile />} />
           <Route path="/signin" element={<Login />} />
 

@@ -2,7 +2,7 @@ import { BrandName } from "../../components";
 
 const Login = () => {
   const clientId = process.env.REACT_APP_SPOTIFY_WEBAPI_CLIENT_ID;
-  const redirectUri = "https://lyrics-red.vercel.app/";
+   const redirectUri = "https://lyrics-red.vercel.app/";
 
   // For Development Purpose only
   // const redirectUri = "http://localhost:3000/";
